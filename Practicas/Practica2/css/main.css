@@ -1,0 +1,144 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #292f36;
+    min-height: 100vh; 
+}
+
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    margin-right: 10px;
+}
+
+header h1 {
+    margin: 0;
+    color:#000
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color:#fff
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color:#fff
+}
+
+form {
+    margin: 20px auto;
+    width: 90%; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 100%;
+    border: 1px solid #93827f;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #4ecdc4;
+}
+
+footer {
+    background-color: #fff;
+    color: #fff;
+    padding-top: 20px;
+    bottom:0;
+    position: fixed;
+    width: 100%;
+    text-align:center;
+    margin-top: auto; 
+}
+
+footer span {
+    font-size: medium;
+    font-weight: bold;
+    color:#292f36;
+    text-align: center;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.table-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.table-buttons button {
+  margin: 0 5px;
+}
+
+.botonesAreaClientes__1__link {
+    color:#fff
+}
