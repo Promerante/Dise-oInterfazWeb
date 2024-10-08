@@ -1,0 +1,149 @@
+body{
+    background-color: rgb(63, 63, 82);
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    justify-content: center;
+}
+
+/*Personalizaciones lista superior*/
+header{
+    display: flex;
+    justify-content: center;
+}
+
+.lista1 {
+    list-style-type: none;
+    text-align: center;
+    font-size: large;
+}
+
+.lista1Elementos{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom right, rgb(63, 63, 82), rgb(13, 13, 15));
+    padding: 10px 10px;
+    width: 12em; 
+    float: left;    
+    border-right: #000000 2px solid;  
+}
+
+.lista1Elementos:hover{
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom right, rgb(63, 63, 82), rgb(255,255,255));
+}
+
+.ultimoListaSuperior{
+    border-right: 0px;
+}
+
+/*Sobre mi*/
+.SobreMi{
+    padding: 15em;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    
+}
+
+.txt1{
+    margin-right: 20px;
+    margin-block-start: 0px;
+    width: auto;
+    max-width: 20em;
+}
+
+.YoPNG{
+    height: 300px;
+    border-radius: 50%;   
+}
+
+/*Aficiones*/
+.Aficciones{
+    justify-content: center;
+    margin-top: 8em;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.listaAficiones li{
+    display: inline;
+    padding-right: 150px;
+    font-size: x-large;
+    width: auto;
+    height: auto;  
+}
+
+.elementosAficiones{
+    position: relative;
+    display: grid;
+    place-items: center;  
+}
+
+.fotoAficiones{
+    max-width: 300px ;
+    max-height: 300px;
+    border-radius: 20px; 
+    display: block; 
+}
+
+.txtAficiones{
+    font-size: small;
+}
+
+.linksAficiones{
+    color: rgb(105, 220, 158 );
+}
+
+/*Ciudades visitadas*/
+.CiudadesVisitadas{
+    margin-top: 8em;
+}
+
+.Fila{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imagenCiudad{
+    max-width: 400px;
+    max-height: 400px;  
+}
+
+.imagenCiudad:hover{
+    content: "title";
+}
+
+.txtCiudades{
+    font-size: small;
+    text-align: center;
+}
+
+/*Actividades reciente*/
+.Actividades{
+    margin-top: 8em;
+    text-align: center;
+    justify-content: center;
+}
+
+.actividadesTabla,th,td{
+    border: 3px solid;
+    margin: auto;
+}
+
+.th,td{
+    padding: 20px;
+}
+
+/*Mas sobre mi*/
+.mas{
+    margin-top: 8em;
+    padding: 8em;
+    justify-content: left;
+}
+
+
+
+
+
+
