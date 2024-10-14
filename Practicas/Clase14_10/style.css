@@ -1,0 +1,45 @@
+.parent{
+    width: 200px;
+    height: 200 px;
+    background: grey;
+ }
+.child{
+    width: 50%;
+    height: 100%;
+    background: indigo;
+}
+.container{
+    font-size: 32px;
+    color: white;
+}
+.element{
+    background: blue;
+    width: 1em;
+    height: 2em;
+}
+:root{
+    font-size: 22px;
+}
+h1{
+    font-size: 2rem;
+}
+@font-face {
+    font-family: "FontAwesome";
+    src: url("fontawesome-webfont.woff");
+}
+p{
+    font-family: "FontAwesome",sans-serif;
+    font-size: 200%;
+}
+.blue{
+    color: blue;
+}
+.rojo{
+    color: red;
+}
+.fa-check-circle{
+    color: green;
+}
+.fa-check-circle:hover{
+    color: indigo;
+}
