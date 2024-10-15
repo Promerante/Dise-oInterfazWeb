@@ -1,0 +1,50 @@
+section{
+    width: 200px;
+}
+.box{
+    width: 100px;
+    padding: 20px 40px 10px 50px;/* Es ARRIBA DERECHA ABAJO IZQUIERDA*/
+    margin: 20px 40px 10px 50px;
+    border: 1px;   
+}
+.elementoCentrado{
+    margin-left: auto;
+    margin-right: auto;
+}
+.capa1{
+    border: dashed;
+    position: relative;
+    height: 8em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    z-index: 1;
+}
+.capa2{
+    background: gold;
+    width: 200px;
+    height: 100px;
+    left: 60px;
+    position: absolute;
+    top: 3em;
+    z-index: 6;
+}
+.capa3{
+    background: lightgreen;
+    width: 200px;
+    height: 7em;
+    left: 20em;
+    opacity: 0.9;
+    position: absolute;
+    top: -25px;
+    z-index: 3;
+}
+.capa4{
+    background: lightblue;
+    width: 200px;
+    height: 7em;
+    opacity: 0.2;
+    position: absolute;
+    left: 160px;
+    top: -25px;
+    z-index: 7;
+}

@@ -1,0 +1,53 @@
+
+.caja0{
+    display: grid;
+    background-color: grey;
+    width: 30em;
+}
+
+
+.caja1{
+    background: lightblue;
+    width: 30em;
+    height: 3em;
+}
+.container{
+    display: inline-flex;
+}
+.lateral1cont{
+    background: aquamarine;
+    width:10em;
+    height: 4em;
+    display: grid;
+}
+.lateral1_2{
+    background-color: white;
+    margin-top: 2em;
+    text-align: center;
+    margin-top: 4em;
+    margin-left: 1em;
+    width: 75%;
+    border: 5px solid yellow;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.contenido{
+    background: pink;
+    width:10em;
+    height: 6em;
+
+
+}
+.lateral2{
+    background: blue;
+    width:10em;
+    height: 8em;
+
+
+}
+.pie{
+    background-color: green;
+
+    width: 30em;
+    text-align: center;
+}
