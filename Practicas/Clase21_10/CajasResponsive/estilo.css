@@ -1,0 +1,65 @@
+.cabecera {
+  background-color: black;
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+  width: 100%;
+}
+.Menu {
+  background-color: grey;
+  width: 100%;
+  font-size: medium;
+}
+a {
+  color: greenyellow;
+}
+.cuerpo{
+    display: inline-flex;
+    width: 100%;
+    background-color: beige;
+    
+}
+.cuerpo1{
+    background-color: bisque;
+    width: 25%;
+    height: fit-content;
+    margin-bottom: 15%;
+}
+.cuerpo2{
+    width: 50%;
+    background-color: violet;
+}
+.cuerpo3{
+    width: 25%;
+    background-color: green;
+    margin-bottom: 5%;
+}
+footer{
+    text-align: center;
+    background-color: aquamarine;
+    font-size: large;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1100px){
+    .cuerpo3{
+        display: none;
+    }
+    .cuerpo2{
+        width: 50%;
+    }
+    .cuerpo1{
+        width: 50%;
+    }
+    
+}
+@media screen and (max-width: 1099px) and (min-width: 1px){
+    .cuerpo3{
+        display: none;
+    }
+    .cuerpo2{
+        display: none;
+    }
+    .cuerpo1{
+        width: 100%;
+    }
+}
