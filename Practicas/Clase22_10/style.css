@@ -1,0 +1,86 @@
+.flex_container{
+    display: flex;
+    align-content: center;
+}
+.flex-item{
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+}
+.item1{
+    background-color: yellow;
+    width: 100%;
+}
+.item2{
+    background-color: brown;
+    width: 50%;
+}
+.item3{
+    background-color: aqua;
+    width: 30%;
+}
+main{
+    text-align: center;
+}
+.container_subtittle{
+    border-bottom: 2px solid black;
+    margin: 5px;
+}
+.container_layout{
+    float: right;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row-wrap;
+    justify-content: space-around;
+    align-items: auto;
+    width: 100%;
+    height: 700px;
+}
+.layout__box{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 5px;
+    width: 20.5%;
+    flex-basis: calc(100%/4);
+    align-self: center;
+    flex-grow: 1;
+    float: left;
+}
+.layout__box--red{
+    background-color: red;
+    flex-grow: 5;
+    order: 2;
+    align-self: self-end;
+}
+.layout__box--yellow{
+    background-color: yellow;
+order: 1;
+}
+.layout__box--green{
+    background-color: green;
+order: 4;
+}
+
+.layout__box--orange{
+    background-color: orange;
+
+}
+.layout__box--blue{
+    background-color: blue;
+order: 3;
+}
+.layout__box--cyan{
+    background-color: cyan;
+
+}
+.container_parrafo{
+    border-bottom: 2px solid black;
+    margin: 0;
+    text-align: left;
+}
