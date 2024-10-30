@@ -3,15 +3,11 @@ body {
   font-family: "Noto Sans JP", serif;
   margin: 0;
   color: #ffffff;
-
 }
 header {
   background-color: #090809;
   width: 100%;
   height: auto;
-}
-.header1{
-
 }
 /*Experimentando me he dado cuenta que el display "flow root" me facilita mucho a distribuir las cajas a mi gusto*/
 .iconoLogo {
@@ -31,6 +27,7 @@ nav {
   text-decoration: none;
   color: #ffffff;
 }
+
 .iconoCarrito {
   width: 30px;
 }
@@ -43,39 +40,80 @@ nav {
 .contacto {
   padding-left: 2rem;
 }
-/*Hasta aqui la parte del header*/
-main{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width:95%;
-    margin: 5rem;
-    
-}
 
+/*Hasta aqui la parte del header*/
+main {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 95%;
+  margin: 5rem;
+}
+.titulo {
+  font-size: xx-large;
+  font-weight: bold;
+}
 .galeriaOfertas {
   display: flex;
   width: 1500px;
   height: 430px;
-
+  margin-top: 2rem;
 }
 .galeriaOfertas img {
   width: 0px;
   flex-grow: 1;
   object-fit: cover;
-  opacity: .8;
-  transition: .5s ease;
+  opacity: 0.8;
+  transition: 0.5s ease;
 }
 .galeriaOfertas img:hover {
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
+  -webkit-filter: contrast(120%);
 }
-.galeriaLimite1{
+.galeriaLimite1 {
   border-top-left-radius: 25px;
-  border-bottom-left-radius:25px;
+  border-bottom-left-radius: 25px;
 }
-.galeriaLimite2{
+.galeriaLimite2 {
   border-top-right-radius: 25px;
-  border-bottom-right-radius:25px;
+  border-bottom-right-radius: 25px;
+}
+.productosDestacados {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  width: 95%;
+  margin: 5rem;
+}
+.filaDestacados {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.elementoDestacado {
+  width: 325px;
+  background-color: #12181c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.elementoDestacado img{
+  width: 100%;
+  height: auto;
+
+}
+.elementoContenido {
+  padding: 16px;
+}
+.elementoContenido > h3{
+  font-size: 28px;
+  margin-bottom: 8px;
+
+}
+.elementoContenido > p{
+  font-size: 15px;
+  margin-bottom: 8px;
+
 }
