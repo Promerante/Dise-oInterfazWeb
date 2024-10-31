@@ -39,54 +39,49 @@ nav {
 .contacto {
   padding-left: 2rem;
 }
-
 /*Hasta aqui la parte del header*/
 main {
   display: flex;
+  margin-right: 0;
+  width: 100%;
+}
+aside {
+  width: 300px;
+  margin-top: 2rem;
+}
+.categorias {
+  width: 100%;
+  height: 250px;
   text-align: center;
   justify-content: center;
-  width: 95%;
-  margin: 5rem;
+  background-color: #12181c;
+  margin: 0;
+  padding: 0;
+}
+.categorias li {
+  list-style: none;
+  margin: 0;
+  margin-top: 1rem;
+}
+.categorias li:hover {
+  background: linear-gradient(90deg, #ffffff, #12181c 100%);
+}
+.categorias li a {
+  font-size: large;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.categoriaslista {
+  text-align: center;
+  margin: 5%;
+  width: 100%;
 }
 .titulo {
   font-size: xx-large;
   font-weight: bold;
 }
-.galeriaOfertas {
-  display: flex;
-  width: 1500px;
-  height: 430px;
-  margin-top: 2rem;
-}
-.galeriaOfertas img {
-  width: 0px;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: 0.5s ease;
-}
-.galeriaOfertas img:hover {
-  width: 300px;
-  opacity: 1;
-  filter: contrast(120%);
-  -webkit-filter: contrast(120%);
-}
-.galeriaLimite1 {
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
-}
-.galeriaLimite2 {
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-.productosDestacados {
-  display: block;
-  text-align: center;
-  justify-content: center;
-  width: 95%;
-  margin: 5rem;
-}
-.filaDestacados {
+.familiares {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -96,14 +91,14 @@ main {
   justify-content: center;
   width: 95%;
 }
-.elementoDestacado {
-  width: 325px;
+.elementoCategoria {
+  width: 200px;
   background-color: #12181c;
   border-radius: 8px;
   overflow: hidden;
   margin: 1rem;
 }
-.elementoDestacado img {
+.elementoCategoria img {
   width: 100%;
   height: 300px;
   max-width: 250px;
@@ -122,9 +117,6 @@ main {
 }
 /*Y hasta aqui toda la configuracion de la pagina en el tamaño deseado*/
 @media screen and (max-width: 1578px) {
-  main {
-    display: none;
-  }
   header {
     width: 100%;
   }
@@ -157,6 +149,19 @@ main {
   .iconoCarrito {
     margin-top: 50%;
   }
+  main {
+    display: block;
+  }
+  aside {
+    width: 100%;
+  }
+  .categorias {
+    margin: 0;
+  }
+  .categoriaslista {
+    margin: 0;
+    margin-top: 2rem;
+  }
 }
 @media screen and (max-width: 901px) {
   header {
@@ -168,14 +173,18 @@ main {
   }
 }
 @media screen and (max-width: 901px) {
-  .seccionesElementos {
-    display: none;
-  }
   .header1 {
     display: flex;
     justify-content: space-between;
   }
   nav {
     justify-content: right;
+  }
+  .seccionesElementos {
+    display: none;
+  }
+  .seccionesElementos img {
+    display: flex;
+    width: 100%;
   }
 }
