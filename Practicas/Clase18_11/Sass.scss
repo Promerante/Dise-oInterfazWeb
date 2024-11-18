@@ -1,0 +1,36 @@
+$blue: #3bbfce;
+$purple: #551A8B;
+$margin: 16px;
+$red: #ff0000;
+
+.content-navigation{
+    border-color: $blue;
+    color: darken($blue,9%);
+}
+.border{
+    padding: $margin/2;
+    margin: $margin/2;
+    border-color: $blue;
+}
+
+@mixin big-blue-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #0000ff;
+}
+.GranAzul{
+    @include big-blue-text();
+}
+a{
+    color: $blue;
+    &:visited{
+        color: $red ;
+    }
+    &:hover{
+        color: $purple;
+    }
+}
+body{
+    background-color: mix($red,$blue,69%);
+}
