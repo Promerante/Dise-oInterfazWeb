@@ -1,0 +1,33 @@
+@for $i from 1 through 4{
+    .width-#{$i}{ width: 10em+$i;}
+}
+@for $i from 1 through 4{
+    .height-#{$i}{height: 25em*$i;}
+}
+$i:5;
+@while $i<9{
+    .width-#{$i}{width: 10em+$i;
+    $i:$i+1;}
+}
+
+$black:#000000;
+$white:#ffffff;
+$lightGrey:#d3d3d3;
+$darkGrey:#545454;
+@mixin text-color($color){
+    @if($color==$black){
+        background-color: $white;
+    }
+    @else if($color==$white){
+        background-color: $black;
+    }
+    @else if($color==$lightGrey){
+        background-color: $black;
+    }
+    @else{
+        background-color: $white;
+    }
+    p{
+        @include text-color($lightGrey);
+    }
+}
