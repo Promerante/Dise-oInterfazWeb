@@ -1,0 +1,105 @@
+@keyframes cambiarColor {
+  from {
+    background-color: yellow;
+  }
+  30% {
+    background-color: red;
+    font-size: 100px;
+  }
+  70% {
+    background-color: blue;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+@keyframes rebote {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+  }
+  70% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+@keyframes practica {
+    0%{
+        background-color: orange;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        opacity: 1;
+}50%{
+    transform: translateY(-50px);
+    transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
+    opacity: 0.5;
+}100%{
+        transform:translateY(0px);
+        transform: translateX(0px);
+        -webkit-transform:translateY(0px);
+        -moz-transform:translateY(0px);
+        -ms-transform:translateY(0px);
+        -o-transform:translateY(0px);
+        opacity: 1;
+}
+}
+@keyframes aparece{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+.mostrar{
+    animation: aparece 5000ms;
+    animation-fill-mode: forwards;
+    background-color: #ee0000;
+    -webkit-animation: aparece 5000ms;
+}
+.elemento {
+  animation: cambiarColor 10s ease-in-out infinite;
+  -webkit-animation: cambiarColor 10s ease-in-out;
+}
+/*
+Duracion y configuraciones adicionales
+*/
+.elemento-rebote {
+  animation: rebote 1s ease-in-out infinite;
+  -webkit-animation: rebote 1s ease-in-out infinite;
+}
+.elemento-ejercicio{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    animation: practica 5s ease-in-out infinite;
+    -webkit-animation: practica 5s ease-in-out infinite;
+}
+
