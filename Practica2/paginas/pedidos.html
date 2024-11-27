@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="../estilos/estilo.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../imagenes/logo/logoICONRAW.png" />
+  </head>
+  <body>
+    <div class="total">
+      <header>
+        <nav class="navegacion">
+          <div class="contLogo">
+            <img
+              src="../../Practica2/imagenes/logo/logo1Rectangulo.png"
+              alt="Logo"
+            />
+          </div>
+          <div class="menu">
+            <a href="#" class="menuElemento">Acerca de nosotros</a>
+            <a href="home.html" class="menuElemento">Categorías</a>
+            <a href="#" class="menuElemento">Suscripción</a>
+            <a href="#" class="menuElemento">Mapas de Fantasía</a>
+            <a href="blackFriday.html" class="menuElemento BlackFriday"
+              >Black Friday</a
+            >
+          </div>
+          <a class="contCarrito" href="pedidos.html">
+            <img src="../imagenes/carritoBlanco.png" alt="Carrito" />
+          </a>
+        </nav>
+
+        <div class="contBuscador">
+          <!-- Contenedor para el buscador -->
+          <div class="buscador">
+            <img src="../imagenes/lupa.png" alt="lupa" class="lupa" />
+            <input type="text" placeholder="Buscar..." />
+          </div>
+        </div>
+      </header>
+      <main class="mainPedidos">
+        <div class="menuCategoria">
+          <span class="tituloCategoria menuMain">Menú Categorías:</span>
+
+          <a href="home.html#mainHome" class="menuElemento menuMain" id="azar"
+            >De azar</a
+          >
+          <a
+            href="home.html#mainHome"
+            class="menuElemento menuMain"
+            id="didactico"
+            >Didacticos</a
+          >
+          <a
+            href="home.html#mainHome"
+            class="menuElemento menuMain"
+            id="tradicional"
+            >Tradicionales</a
+          >
+          <a href="home.html#mainHome" class="menuElemento menuMain" id="cartas"
+            >De cartas</a
+          >
+        </div>
+        <!--
+          IMPORTANTE: he tomado la decision de realizar la tabla en modo grid por que es la mejor manera
+          de plasmar el contenido de manera responsive y poder cambiar los atributos necesarios
+          -->
+          <h1 style="text-align: center;">Formato:</h1>
+        <div class="contPedidos">
+          <div class="fila principal">
+            <h1>PEDIDOS RECIBIDOS:</h1>
+            <h1>ESTADO:</h1>
+            <h1>ACCIONES:</h1>
+          </div>
+          <div class="generico">
+            <div class="producto elementoHome">
+              <img src="../imagenes/imgProductos/UnoP.png" alt="UNO" />
+              <span>UNO</span>
+              <span>4,99€</span>
+            </div>
+            <div class="estado">
+              <div class="elementoHome">
+                <img src="../imagenes/estados/entregado.png" alt="entregado" />
+                <span>ENTREGADO</span>
+              </div>
+            </div>
+            <div class="acciones">
+              <img src="../imagenes/estados/usuario.png" alt="eliminar" />
+              <img
+                src="../imagenes/estados/llamada-de-emergencia.png"
+                alt="Llamar"
+              />
+              <img src="../imagenes/estados/prioridad.png" alt="Priorizar" />
+            </div>
+          </div>
+          <div class="generico par">
+            <div class="producto elementoHome">
+              <img src="../imagenes/imgProductos/ajedrez.png" alt="Ajedrez" />
+              <span>Ajedrez</span>
+              <span>14,99€</span>
+            </div>
+            <div class="estado">
+              <div class="elementoHome">
+                <img src="../imagenes/estados/cancelado.png" alt="entregado" />
+                <span>CANCELADO</span>
+              </div>
+            </div>
+            <div class="acciones">
+              <img src="../imagenes/estados/usuario.png" alt="eliminar" />
+              <img
+                src="../imagenes/estados/llamada-de-emergencia.png"
+                alt="Llamar"
+              />
+              <img src="../imagenes/estados/prioridad.png" alt="Priorizar" />
+            </div>
+          </div>
+          <div class="generico">
+            <div class="producto elementoHome">
+              <img src="../imagenes/imgProductos/sudoku.png" alt="Sudoku" />
+              <span>Sudoku</span>
+              <span>9,99€€</span>
+            </div>
+            <div class="estado">
+              <div class="elementoHome">
+                <img
+                  src="../imagenes/estados/problemasTransporte.png"
+                  alt="problemasTransporte"
+                />
+                <span>Problemas en el transporte</span>
+              </div>
+            </div>
+            <div class="acciones">
+              <img src="../imagenes/estados/usuario.png" alt="eliminar" />
+              <img
+                src="../imagenes/estados/llamada-de-emergencia.png"
+                alt="Llamar"
+              />
+              <img src="../imagenes/estados/prioridad.png" alt="Priorizar" />
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="piePagina">
+        <div class="contLogo">
+          <img
+            src="../../Practica2/imagenes/logo/logo1Rectangulo.png"
+            alt="Logo"
+          />
+        </div>
+        <div class="copyRight">
+          <h4>Derechos reservados:</h4>
+          <div class="contCopyright">
+            <span>
+              ©IMAGEN SUDOKU USO GRATUITO
+              <a
+                href="https://www.pexels.com/es-es/foto/tres-documentos-de-papel-blanco-796510/
+                        "
+                >https://www.pexels.com/es-es/foto/tres-documentos-de-papel-blanco-796510/
+              </a>
+            </span>
+            <span>
+              ©IMAGEN AJEDREZ PRODUCTO USO GRATUITO(CCOO)
+              <a
+                href="https://www.pexels.com/es-es/foto/tres-documentos-de-papel-blanco-796510/"
+              >
+                https://www.pexels.com/es-es/foto/tres-documentos-de-papel-blanco-796510/
+              </a>
+            </span>
+            <span>
+              ©IMAGEN UNO PRODUCTO USO GRATUITO(CCOO)
+              <a
+                href="https://www.pexels.com/es-es/foto/manos-jugando-juego-partido-3986042/"
+              >
+                https://www.pexels.com/es-es/foto/manos-jugando-juego-partido-3986042/
+              </a>
+            </span>
+            <span>
+              ©ICONO FACEBOOK:REQUIERE ATRIBUCION
+              <a href="https://www.flaticon.es/iconos-gratis/facebook">
+                https://www.flaticon.es/iconos-gratis/facebook
+              </a>
+            </span>
+            <span>
+              ©ICONO INSTAGRAM:REQUIERE ATRIBUCION
+              <a
+                href="https://www.flaticon.es/iconos-gratis/logotipo-de-instagram"
+              >
+                https://www.flaticon.es/iconos-gratis/logotipo-de-instagram
+              </a>
+            </span>
+            <span>
+              ©ICONO TWITTER:REQUIERE ATRIBUCION
+              <a href="https://www.flaticon.es/iconos-gratis/gorjeo">
+                https://www.flaticon.es/iconos-gratis/gorjeo
+              </a>
+            </span>
+            <span>
+              ©ICONO ENTREGADO:REQUIERE ATRIBUCION
+              <a href="https://www.flaticon.es/iconos-gratis/recibir">
+                https://www.flaticon.es/iconos-gratis/recibir
+              </a>
+            </span>
+            <span>
+              ©ICONO CANCELADO:REQUIERE ATRIBUCION
+              <a href="https://www.flaticon.es/iconos-gratis/error">
+                https://www.flaticon.es/iconos-gratis/error
+              </a>
+            </span>
+            <span>
+              ©ICONO PROBLEMAS:REQUIERE ATRIBUCION
+              <a href="https://www.flaticon.es/iconos-gratis/maletero">
+                https://www.flaticon.es/iconos-gratis/maletero
+              </a>
+            </span>
+          </div>
+        </div>
+        <div class="redes">
+          <img src="../imagenes/redes/facebook.png" alt="facebook" />
+          <img src="../imagenes/redes/twitter.png" alt="twitter" />
+          <img src="../imagenes/redes/instagram.png" alt="instagram" />
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

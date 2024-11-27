@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navegacion {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: flex-start;
+  background-color: #333;
+  padding: 10px;
+  .contLogo img,
+  .contCarrito img {
+    width: 40px; /* Tamaño de las imágenes */
+    height: auto;
+  }
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
+    justify-self: flex-start;
+    .menuElemento {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      &:hover {
+        background-color: #444;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.contBuscador {
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: right;
+  .buscador {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    .lupa {
+      width: 20px; /* Tamaño del icono de la lupa */
+      margin-right: 10px;
+    }
+    input[type="text"] {
+      border: none;
+      padding: 5px;
+      outline: none;
+      width: 100%;
+    }
+  }
+}

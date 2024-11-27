@@ -1,0 +1,56 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+.navegacion {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: flex-start;
+  background-color: #333;
+  padding: 10px; }
+  .navegacion .contLogo img,
+  .navegacion .contCarrito img {
+    width: 40px;
+    /* Tamaño de las imágenes */
+    height: auto; }
+  .navegacion .menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 20px;
+    justify-self: flex-start; }
+    .navegacion .menu .menuElemento {
+      color: white;
+      text-decoration: none;
+      padding: 10px; }
+      .navegacion .menu .menuElemento:hover {
+        background-color: #444;
+        border-radius: 5px; }
+
+.contBuscador {
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: right; }
+  .contBuscador .buscador {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px; }
+    .contBuscador .buscador .lupa {
+      width: 20px;
+      /* Tamaño del icono de la lupa */
+      margin-right: 10px; }
+    .contBuscador .buscador input[type="text"] {
+      border: none;
+      padding: 5px;
+      outline: none;
+      width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
