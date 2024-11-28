@@ -424,3 +424,16 @@ para reutilizar codigo opto por tambien ponerle sus respectivas clases.Lo mismo 
   th,td{
   border: 2px solid $rojo;
  }
+
+ //RETOQUES BLACKFRIDAY
+ .navbar-text,.navbar-brand,.nav-link{
+  color: $blanco;
+ }
+ .imagenBoots{
+  height: 400px;
+  max-width: 400px;
+ }
+ .redes svg{
+  min-width: 250px;
+  width: 300px;
+ }
