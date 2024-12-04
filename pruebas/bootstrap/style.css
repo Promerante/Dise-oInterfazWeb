@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Afacad";
+  src: url(../fuentes/AfacadFlux-VariableFont_slnt\wght.ttf);
+}
+* {
+  font-family: "Afacad", arial, "Times New Roman";
+  font-size: 1em;
+}
+
+.bg-principal,
+header .buscador button,
+.contador {
+  background-color: #ff0000;
+}
+
+.bg-secundario {
+  background-color: #808080;
+}
+
+.bg-principal-auxiliar {
+  background-color: #ff000066;
+}
+
+.bg-secundario-auxiliar {
+  background-color: #3a3d3b33;
+}
+
+.bg-white,
+header .buscador button:hover {
+  background-color: white;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.color-white,
+.contador {
+  color: white;
+}
+
+.color-black,
+.carrito a,
+.carrito:hover .contador,
+.enlace {
+  color: black;
+}
+
+.color-principal,
+header .buscador button:hover,
+.carrito:hover a,
+.enlace:hover {
+  color: #ff0000;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.subtitulo {
+  font-weight: 500;
+  font-size: 2em;
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+.contenedor {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  div.cuerpo {
+    grid-template-areas: "a c" "b b";
+  }
+
+  .contenedor {
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.cuerpo {
+    grid-template-areas: "a" "c" "b";
+  }
+  div.cuerpo img {
+    width: 225px;
+    height: 225px;
+  }
+  div.cuerpo img:hover {
+    width: 250px;
+    height: 250px;
+  }
+
+  .contenedor {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.cuerpo {
+  display: grid;
+  grid-template-areas: "a b" "a c";
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header .buscador {
+  grid-column: 3/11;
+  border-collapse: collapse;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  margin: 0;
+}
+header .buscador input {
+  width: 45em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 3em;
+}
+header .buscador button {
+  border-top-right-radius: 10px;
+  margin: 0;
+  padding: 0;
+  border-bottom-right-radius: 10px;
+  height: 3em;
+  width: 3em;
+}
+header .buscador button i {
+  font-size: 2em;
+}
+
+.carrito {
+  grid-column: 12 / 12;
+  display: flex;
+  width: auto;
+  font-size: 2em;
+  align-items: center;
+}
+
+.contador {
+  font-size: 0.5em;
+  height: 1em;
+  width: 1em;
+  border-radius: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 1em;
+  right: 0.6em;
+}
+
+.navegador {
+  background: linear-gradient(0deg, white, #3a3d3b33);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  width: 100%;
+  height: 3em;
+}
+
+.enlace {
+  text-decoration: none;
+}
+
+.cuerpo img {
+  width: 200px;
+  height: 200px;
+  transition: all 0.75s;
+}
+.cuerpo img:hover {
+  width: 225px;
+  height: 225px;
+}
+
+img {
+  width: 400px;
+  height: 500px;
+}
+
+aside {
+  grid-area: a;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+  text-align: center;
+  height: 250px;
+}
+aside a {
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+
+.categorias {
+  grid-area: b;
+}
+
+.productos {
+  grid-area: c;
+}
+
+h1 {
+  text-align: center;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+}
+
+/*# sourceMappingURL=style.css.map */

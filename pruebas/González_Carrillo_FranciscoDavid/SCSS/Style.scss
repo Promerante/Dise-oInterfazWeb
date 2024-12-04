@@ -1,0 +1,231 @@
+$colorPrincipal : #ff0000;
+$colorSecundario : #808080;
+$colorPrincipalAuxiliar: #ff000066;
+$colorSecundarioAuxliar: #3a3d3b33;
+$white : white;
+$black : black;
+$columnas : 12;
+
+$tamañoFuente : 1em;
+$buscadorTamaño : 45em;
+@mixin columnas($numColumnas){
+    display: grid;
+    grid-template-columns: repeat($numColumnas, 1fr);
+    gap: 0;
+
+}
+@font-face {
+    font-family: "Afacad";
+    src: url(../fuentes/AfacadFlux-VariableFont_slnt\wght.ttf);
+}
+
+* {
+    font-family: "Afacad", arial, "Times New Roman";
+    font-size: $tamañoFuente;
+}
+
+.bg-principal{
+    background-color: $colorPrincipal;
+}
+.bg-secundario{
+    background-color: $colorSecundario;
+}
+.bg-principal-auxiliar{
+    background-color: $colorPrincipalAuxiliar;
+}
+.bg-secundario-auxiliar{
+    background-color: $colorSecundarioAuxliar;
+}
+.bg-white{
+    background-color: $white;
+}
+.bg-black{
+    background-color: $black;
+}
+.color-white{
+    color: $white;
+}
+.color-black{
+    color:$black
+}
+.color-principal{
+    color : $colorPrincipal
+}
+
+.titulo{
+    font-weight: bold;
+    font-size: $tamañoFuente*3;
+}
+.subtitulo{
+    font-weight: 500;
+    font-size: $tamañoFuente*2;
+}
+header{
+    @include columnas($columnas);
+    width: 100%;
+}
+.contenedor{
+    width: 100%;
+    @include columnas($columnas/3)
+}
+
+@media screen and (max-width: 1000px) {
+    div.cuerpo{
+        grid-template-areas: "a c"
+        "b b";
+    }
+    .contenedor{
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 600px) {
+    div.cuerpo{
+        grid-template-areas: "a" "c" "b";
+        img{
+            width: 225px;
+            height: 225px;
+        }
+        img:hover{
+            width: 250px;
+            height: 250px
+        }
+
+    }
+    .contenedor{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+}
+.cuerpo{
+    display: grid;
+    grid-template-areas: "a b"
+                        "a c";
+}
+body{
+    padding: 0;
+    margin: 0;
+
+}
+header .buscador{
+    grid-column: 3/11;
+    border-collapse: collapse;
+    display : flex;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    margin: 0;
+    input{
+        width: $buscadorTamaño;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        height: 3em;
+    }
+    button{
+        @extend .bg-principal;
+        border-top-right-radius: 10px;
+        margin: 0;
+        padding: 0;
+        border-bottom-right-radius: 10px;
+        height: 3em;
+        width: 3em;
+        i{
+            font-size: $tamañoFuente * 2;
+        }
+    }
+    button:hover{
+        @extend .bg-white;
+        @extend .color-principal;
+    }
+}
+
+.carrito {
+    grid-column: 12 / 12;
+    display: flex;
+    width: auto;
+    font-size: 2em;
+    align-items: center;
+    a{
+        @extend .color-black;
+    }
+  }
+  
+  .contador {
+    @extend .bg-principal;
+    @extend .color-white;
+    font-size: $tamañoFuente/2;
+    height: 1em;
+    width: 1em;
+    border-radius: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 1em;
+    right: 0.6em;
+  }
+  .carrito:hover{
+    a{
+        @extend .color-principal;
+    }
+    .contador{
+         @extend .color-black
+    }
+  }
+.navegador {
+    background: linear-gradient(
+        0deg,
+        $white,
+        $colorSecundarioAuxliar
+      );
+      text-align: center;
+      @include columnas(4);
+      width: 100%;
+      height: 3em;
+    }
+.enlace{
+      @extend .color-black;  
+      text-decoration: none;      
+  }
+.enlace:hover{
+      @extend .color-principal;
+  }
+    .cuerpo{
+    img{
+        width: 200px;
+        height: 200px;
+        transition: all 0.75s;
+    }
+    img:hover{
+        width: 225px;
+        height: 225px
+    }
+}
+img{
+    width: 400px;
+    height: 500px;
+}
+
+aside{
+    grid-area: a;
+    @include columnas(1);
+    text-align: center;
+    height: 250px;
+    a{
+        display: block;
+        text-align: center;
+        align-items: center;
+    }
+}
+.categorias{
+    grid-area: b;
+}
+.productos{
+    grid-area: c;
+}
+h1{
+text-align: center;
+}
+.logo{
+    width: 75px;
+    height: 75px;
+}
