@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html id="html" lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 13/1</title>
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <h1 id="titulo">Soy el titulo</h1>
+    <p id="parrafo">Soy un parrafo</p>
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="disminuir()">Disminuir</button>
+    <button onclick="izquierda()">Izquierda</button>
+    <button onclick="derecha()">Derecha</button>
+    <button onclick="color()">Cambiar color</button>
+    <button onclick="titulo()">Prop</button>
+    <button onclick="html()">HTML</button>
+
+    <script>
+      $(document).ready(function () {});
+      function aumentar() {
+        let tamañoTitulo = parseInt($("#titulo").css("font-size"));
+        let tamañoParrafo = parseInt($("#parrafo").css("font-size"));
+        tamañoTitulo += 10;
+        tamañoParrafo += 10;
+        $("#titulo").css("font-size", tamañoTitulo);
+        $("#parrafo").css("font-size", tamañoParrafo);
+      }
+      function disminuir() {
+        let tamañoTitulo = parseInt($("#titulo").css("font-size"));
+        let tamañoParrafo = parseInt($("#parrafo").css("font-size"));
+        tamañoTitulo -= 10;
+        tamañoParrafo -= 10;
+        $("#titulo").css("font-size", tamañoTitulo);
+        $("#parrafo").css("font-size", tamañoParrafo);
+      }
+      function izquierda() {
+        let tamañoTitulo = parseInt($("#titulo").css("margin-left"));
+        let tamañoParrafo = parseInt($("#parrafo").css("margin-left"));
+        tamañoTitulo -= 10;
+        tamañoParrafo -= 10;
+        $("#titulo").css("margin-left", tamañoTitulo);
+        $("#parrafo").css("margin-left", tamañoParrafo);
+      }
+      function derecha() {
+        let tamañoTitulo = parseInt($("#titulo").css("margin-left"));
+        let tamañoParrafo = parseInt($("#parrafo").css("margin-left"));
+        tamañoTitulo += 10;
+        tamañoParrafo += 10;
+        $("#titulo").css("margin-left", tamañoTitulo);
+        $("#parrafo").css("margin-left", tamañoParrafo);
+      }
+      function color() {
+     
+        let color = $("#titulo").css("color");
+         if (color == "rgb(255, 0, 0)") {
+          $("#titulo").css("color", "yellow");
+          $("#parrafo").css("color", "yellow");
+        } else if (color == "rgb(255, 255, 0)") {
+          $("#titulo").css("color", "blue");
+          $("#parrafo").css("color", "blue");
+        } else {
+          $("#titulo").css("color", "red");
+          $("#parrafo").css("color", "red");
+        }
+      }
+      function titulo(){
+        alert($("#titulo").css("color"));
+      }
+
+      function html(){
+        alert($("#html").html())
+      }
+    </script>
+  </body>
+</html>

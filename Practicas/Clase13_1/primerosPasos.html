@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>HOLA MUNDO!</h1>
+      <p id="texto">No me cambies !!!!</p>
+      <button onclick="" id="boton">CAMBIALO!</button>
+    </div>
+    <div class="cont2">
+      <div id="miDiv">HOLA,MUNDO</div>
+      <button id="miBoton">click</button>
+    </div>
+    <div class="cont3">
+      <input type="text" name="usuario" value="Nombre de usuario" id="" />
+      <input type="checkbox" name="" checked id="" />
+      <a href="#" id="enlace" title="Enlace a ningun lado"> Haz click aqui</a>
+    </div>
+
+    <script>
+      //EVENTO CUANDO LA PAGINA ESTA CARGADA:
+      $(document).ready(function () {
+        jQuery("p").css("background-color", "red");
+        //EVENTO AL HACER CLIC EN EL BOTON:
+        $("#boton").click(function () {
+          //Ahora en este evento se cambia el txt:
+          $("#texto").text("YEEEEI LO HAS CAMBIADO!");
+          alert("Se ha llegado al final de la ejecucion de codigo jquery :3");
+        });
+        $("#miBoton").click(function () {
+          $("#miDiv")
+            .text("Texto actualizado")
+            .css("color", "red")
+            .slideUp(1000);
+        });
+        $("#enlace").click(function () {
+          $("[tittle]").css("text-decoration", "underline"),
+            $("input[name='usuario']").val("Nuevo Usuario");
+        });
+      });
+    </script>
+  </body>
+</html>
