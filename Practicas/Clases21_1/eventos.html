@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+    <style>
+      .resaltado {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggleButton">ActivarEvento</button>
+    <p id="parrafo">Haz clic en este parrafo</p>
+
+    <div class="ej2">
+        <h1>Ejemplo de Filter map y Find con jquery</h1>
+        <ol id="usuarios">
+            <li data-nombre="Juan" data-edad="25" data-id="1">Juan,25 años</li>
+            <li data-nombre="Ana" data-edad="30" data-id="2">Ana,30 años</li>
+            <li data-nombre="Carlos" data-edad="20" data-id="3">Carlos,20 años</li>
+            <li data-nombre="Laura" data-edad="35" data-id="4">Laura,35 años</li>
+        </ol>
+        <button id="ej2bt1">Mayores de 25 años</button>
+        <button id="ej2bt2">Solo nombres</button>
+        <button id="ej2bt3">Primero mayor de 30 años</button>
+        <button id="ej2bt4">Edad y nombres de menores de 30 años</button>
+        <div class="result">
+
+        </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        //Ejercicio 2:
+        const usuarios=$("#usuarios li").map(function(){
+            return{
+                //CON DATA OBTENEMOS EL VALOR ASOCIADO A DATA-XXXX DONDE XXXX ES LO QUE ESCRIBIMOS DENTRO
+                id: $(this).data('id'),
+                nombre: $(this).data('nombre'),
+                edad: $(this).data('edad')
+            };
+        })
+        //OJOOOO: EL GET ES LO QUE HACE QUE FUNCIONES, EL GET TRANSFORMA ESA ARRAY DE OBJETOS A UNA ARRAY CON ARRAY ASOCIATIVOS
+
+        const $resultDiv= $("#result");
+
+        $("#ej2bt1").click(function(){
+            const may25 = usuarios.filter((usuario) => usuario.edad > 25);
+            $("#usuarios").empty().append(may25.map(usuario=>`<li>${usuario.nombre},${usuario.edad} años </li>`))
+            $resultDiv.text("Usuarios mayores de 25 años mostrados. ");
+        })
+        $("#ej2bt2").click(function(){
+            const nombres= usuarios.map((usuario)=>usuario.nombre);
+            $("#usuarios").empty().append(nombres.map(nombre=>`<li>${nombre}</li>`))
+        })
+
+
+
+
+
+
+
+
+        let isEventActive = false;
+        $("#toggleButton").on("click", function () {
+          if (isEventActive) {
+            $("#parrafo").off("click");
+            $(this).text("Activar evento");
+            isEventActive = false;
+          } else {
+            $("#parrafo").on("click", function () {
+              $(this).toggleClass("resaltado");
+            });
+            $(this).text("Desactivar evento");
+            isEventActive = true;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eliminar</title>
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+
+  </head>
+  <body>
+    <div class="cont">
+      <p id="p1">Este parrafo se borrara</p>
+      <button id="bt1">VACIAR PARRAFO</button>
+      <div class="hijo">
+        <p id="p2">Este contenid <br />se borrarra</p>
+        <button id="bt2">VACIAR DIV</button>
+      </div>
+    </div>
+
+    <script>
+        $("#bt1").click(function(){
+            $("#p1").remove();
+        })
+        
+        $("#bt2").click(function(){
+            $("#p2").empty();
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones Interactivas</title>
+    <style>
+      .caja1 {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        border: 5px solid black;
+        padding: 1rem;
+      }
+      .caja2 {
+        width: 500px;
+        height: 500px;
+        background-color: lightcoral;
+        border: 5px solid black;
+        padding: 2rem;
+      }
+      .practica2 {
+        text-align: center;
+        font-size: x-large;
+        margin: 0;
+        padding: 0;
+      }
+
+      .p2Boton {
+        width: 300px;
+        height: 100px;
+        margin: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: aquamarine;
+      }
+      .practica2 > input {
+        width: 500px;
+        height: 50px;
+      }
+      .tarea {
+        width: 300px;
+        height: 100px;
+        margin: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: lightcoral;
+      }
+      .tareaCompletada {
+        width: 300px;
+        height: 100px;
+        margin: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: red;
+      }
+    </style>
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <div class="ejemplo1">
+      <div class="caja1">Caja1</div>
+      <button id="bt1">Obtener dimensiones</button
+      ><button id="bt2">Modificar Caja</button>
+      <br />
+    </div>
+    <div class="practica2">
+      <h2>Lista de Tareas</h2>
+      <input
+        type="text"
+        name=""
+        id="inputPractica2"
+        placeholder="Escriba la tarea..."
+      />
+      <br />
+      <button id="p2bt1" class="p2Boton">Agregar Tarea</button>
+      <br />
+      <button id="p2bt2" class="p2Boton">Eliminar Tareas completadas</button>
+      <br />
+      <button id="p2bt3" class="p2Boton">Vaciar Lista</button>
+    </div>
+
+    <div id="hechas">
+      <h2>Tareas completadas</h2>
+    </div>
+
+    <script>
+      $("#p2bt1").click(function () {
+        let txt = $("#inputPractica2").val();
+        let tarea = $("<button>");
+        tarea.click(function () {
+          tarea.toggleClass("tareaCompletada");
+        });
+        tarea.append(txt);
+        tarea.toggleClass("tarea");
+        $(".practica2").append(tarea);
+        $("#inputPractica2").val("");
+      });
+      $("#p2bt2").click(function () {
+        let tareaCompletadas = $(".tareaCompletada");
+        let copia = tareaCompletadas;
+        tareaCompletadas.remove();
+        $("#hechas").append(copia);
+      });
+      $("#p2bt3").click(function () {
+        let tareaCompletadas = $(".tareaCompletada");
+        let tareas = $(".tarea");
+        tareas.remove();
+        tareaCompletadas.remove();
+      });
+
+      $("#bt1").click(function () {
+        let caja = $(".caja1");
+        let offset = caja.offset();
+        $(".ejemplo1").append(
+          `Dimensiones de la caja:<br>
+            Anchura:${caja.width()}<br>
+            Altura: ${caja.height()}<br>
+            Inner width: ${caja.innerWidth()}<br>
+            Inner height: ${caja.innerHeight()}<br>
+            Outer height: ${caja.outerHeight()}<br>
+            Offsett: Top:${caja.offset().top} 
+            Bottom:${caja.offset().bottom} 
+            Left:${caja.offset().left}<br>
+             `
+        );
+      });
+      $("#bt2").click(function () {
+        $(".caja1").css({
+          width: "500px",
+          height: "500px",
+          backgroundColor: "lightcoral",
+          border: "5px solid black",
+          margin: "2rem",
+        });
+      });
+    </script>
+  </body>
+</html>

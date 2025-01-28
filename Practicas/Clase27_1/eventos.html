@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+    <style>
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+}
+body{
+    display: flex;
+    padding: 10rem;
+}
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="contInfo">
+        <p class="res">Texto de ejemplo</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".container").mousemove(function(e){
+                var position=`Posicion del raton: X= ${e.offsetX}   Y=${e.offsetY}`
+                $(".res").text(position)
+            })
+            $(".container").mouseleave(function(e){
+                var position=`Se ha quitado el raton del div`
+                $(".res").text(position)
+            })
+            $(".container").mousedown(function(e){
+                var position=`Has hecho click`
+                $(".res").text(position)
+            })
+            $(".container").dblclick(function(e){
+                $(".container").css("background-color","red")
+                var position=`Has hecho doble click`
+                $(".res").text(position)
+            })
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+    <style>
+      .destacado {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="titulo-principal">Bienvenidos</h1>
+    <p class="info">Parrafo</p>
+    <p>Otro parrafo</p>
+    <ul id="miLista">
+      <li class="item">Italica</li>
+      <li class="item">mayuscula</li>
+      <li class="item">Negrita</li>
+    </ul>
+    <div class="cont">
+      <a href="https://google.com" id="link">Clicka aqui</a>
+    </div>
+    <div class="cont2">
+      <input type="text" id="txtTexto1" value="un valor" />
+      <input
+        type="text"
+        id="txtTexto2"
+        value="un valor"
+      />
+      <input type="text" id="txtTexto3" value="un valor" />
+      <input
+        type="text"
+        id="txtTexto4"
+        value="un valor"
+      />
+      <button id="boton2">CambiaValores</button>
+    </div>
+    <div class="cont3" style="left: 20px; display: absolute;"><img src="smile.png" id="imagen" alt="" >
+    <button onclick="aumentar()">Aumenta</button></div>
+
+    <script>
+      $(document).ready(function () {
+        $("ul li:first").css("font-style", "italic");
+        $("ul li:eq(1)").css("text-transform", "uppercase");
+        $("ul li:last").css("font-weight", "bold");
+        alert($("#link").prop("href"));
+        $("#link").prop("href", "https://medac.es");
+        alert($("#link").prop("href"));
+        $("#boton2").click(function(){
+            $("input").prop("value","valor nuevo")
+
+        })
+       
+      })
+      function aumentar(){
+            width=parseInt($("#imagen").css("width"));
+            width+=10;
+            $("#imagen").css("width",width);
+            $("#imagen").css("height",width);
+            $("#imagen").css("margin",width);
+
+        };
+    </script>
+  </body>
+</html>
