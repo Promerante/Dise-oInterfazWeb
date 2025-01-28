@@ -36,10 +36,12 @@
         </div>
       </div>
     </header>
+
     <main>
-      <div class="pendiente">
+      <div id="contPendiente">
         <h1>Productos pendientes</h1>
-        <table class="tablaPendiente">
+        <br />
+        <table class="tablaPedidos" id="pendiente">
           <!-- Encabezado -->
           <tr>
             <th>Código:</th>
@@ -55,18 +57,14 @@
               <img src="imagenes/logo/logoICONRAW.png" alt="" />
             </td>
             <td>27/01/2025</td>
-            <td>19,95€</td>
-            <td>
-              <div class="contAcciones">
-                <ul class="acciones">
-                  <li class="accion">Accion de ejemplo 1</li>
-                  <li class="accion">Accion de ejemplo 2</li>
-                  <li class="accion">Accion de ejemplo 3</li>
-                </ul>
-              </div>
+            <td data-precio="1">19,95€</td>
+            <td class="contAcciones">
+              <a class="menuElemento BlackFriday archivar">Cambiar de tabla </a>
+              <a class="menuElemento BlackFriday eliminar"
+                >Eliminar de la tabla</a
+              >
             </td>
           </tr>
-
           <tr>
             <td>415</td>
             <td>
@@ -74,14 +72,11 @@
             </td>
             <td>20/12/2024</td>
             <td>24,95€</td>
-            <td>
-              <div class="contAcciones">
-                <ul class="acciones">
-                  <li class="accion">Accion de ejemplo 1</li>
-                  <li class="accion">Accion de ejemplo 2</li>
-                  <li class="accion">Accion de ejemplo 3</li>
-                </ul>
-              </div>
+            <td class="contAcciones">
+              <a class="menuElemento BlackFriday archivar">Cambiar de tabla </a>
+              <a class="menuElemento BlackFriday eliminar"
+                >Eliminar de la tabla</a
+              >
             </td>
           </tr>
 
@@ -92,14 +87,80 @@
             </td>
             <td>20/11/2024</td>
             <td>49,95€</td>
+            <td class="contAcciones">
+              <a class="menuElemento BlackFriday archivar">Cambiar de tabla </a>
+              <a class="menuElemento BlackFriday eliminar"
+                >Eliminar de la tabla</a
+              >
+            </td>
+          </tr>
+        </table>
+        <br /><br />
+        <button class="menuElemento BlackFriday" id="archivarTabla">
+          Archivar tabla
+        </button>
+      </div>
+
+      <br /><br /><br /><br />
+      <div id="contArchivados">
+        <h1>Productos archivados</h1>
+        <br />
+        <table class="tablaPedidos" id="archivados">
+          <!-- Encabezado -->
+          <tr>
+            <th>Código:</th>
+            <th>Imagen:</th>
+            <th>Fecha:</th>
+            <th>Importe:</th>
+            <th>Acciones:</th>
+          </tr>
+
+          <tr>
+            <td>987</td>
             <td>
-              <div class="contAcciones">
-                <ul class="acciones">
-                  <li class="accion">Accion de ejemplo 1</li>
-                  <li class="accion">Accion de ejemplo 2</li>
-                  <li class="accion">Accion de ejemplo 3</li>
-                </ul>
-              </div>
+              <img src="imagenes/logo/logoICONRAW.png" alt="" />
+            </td>
+            <td>27/01/2025</td>
+            <td>19,95€</td>
+            <td class="contAcciones">
+              <a class="menuElemento BlackFriday archivar">
+                Cambiar de tabla
+              </a>
+              <a class="menuElemento BlackFriday eliminar"
+                >Eliminar de la tabla</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>765</td>
+            <td>
+              <img src="imagenes/logo/logoICONRAW.png" />
+            </td>
+            <td>20/12/2024</td>
+            <td>24,95€</td>
+            <td class="contAcciones">
+              <a class="menuElemento BlackFriday archivar">Cambiar de tabla </a>
+              <a class="menuElemento BlackFriday eliminar"
+                >Eliminar de la tabla</a
+              >
+            </td>
+          </tr>
+
+          <tr>
+            <td>543</td>
+            <td>
+              <img src="imagenes/logo/logoICONRAW.png" alt="" />
+            </td>
+            <td>20/11/2024</td>
+            <td>49,95€</td>
+            <td class="contAcciones">
+              <a class="menuElemento BlackFriday archivar" value="1"
+                >Cambiar de tabla
+              </a>
+              <a class="menuElemento BlackFriday eliminar"
+                >Eliminar de la tabla</a
+              >
             </td>
           </tr>
         </table>

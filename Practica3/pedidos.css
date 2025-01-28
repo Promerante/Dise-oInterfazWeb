@@ -113,7 +113,7 @@ input[type="text"] {
 }
 /*HEADER COMPLETADO. IMPORTANTE:pese a que puede llamar a nav y editarlo tal cual,
   para reutilizar codigo opto por tambien ponerle sus respectivas clases.Lo mismo con MAIN*/
-.tablaPendiente {
+.tablaPedidos {
   justify-self: center;
   border-collapse: collapse;
   min-width: 90%;
@@ -121,18 +121,32 @@ input[type="text"] {
   text-align: center;
 }
 /* Puntero a tablas(puede que generica) */
-.tablaPendiente th,
+.tablaPedidos th,
 td {
   border: 2px solid whitesmoke;
   padding: 15px;
 }
 /* Puntero a celdas(quizas genericas) */
-.tablaPendiente th{
+.tablaPedidos th{
     font-weight: bolder;
     font-size: 2em;
 }
-.acciones{
+.contAcciones{
+  text-align: center;
+}
+td> button{
     list-style: none;
     display: flex;
-    gap: 10px;
+    margin: 0;
+    margin-right: 0;
+}
+#archivarTabla{
+  float: right;
+  margin-right: 5rem;
+  background-color: #090809;
+  width: 15rem;
+  height: 5rem;
+}
+#archivarTabla:hover{
+  background-color: #242527;
 }
