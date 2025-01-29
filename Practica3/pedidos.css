@@ -127,26 +127,95 @@ td {
   padding: 15px;
 }
 /* Puntero a celdas(quizas genericas) */
-.tablaPedidos th{
-    font-weight: bolder;
-    font-size: 2em;
+.tablaPedidos th {
+  font-weight: bolder;
+  font-size: 2em;
 }
-.contAcciones{
+.contAcciones {
   text-align: center;
 }
-td> button{
-    list-style: none;
-    display: flex;
-    margin: 0;
-    margin-right: 0;
+td > button {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-right: 0;
 }
-#archivarTabla{
+.archivarTabla {
   float: right;
   margin-right: 5rem;
   background-color: #090809;
   width: 15rem;
   height: 5rem;
 }
-#archivarTabla:hover{
+.archivarTabla:hover {
   background-color: #242527;
+}
+.piePagina {
+  background-color: #242527;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  margin-top: 2rem;
+  border-top: 2px solid #df0713;
+}
+
+.piePagina > .contLogo > img {
+  height: 10rem;
+  width: auto;
+}
+
+.contCopyright {
+  font-size: x-large;
+}
+
+.accesibilidad span{
+  display: block;
+  font-size: x-large;
+  margin-bottom: 20px;
+  margin-left: 50px;
+
+}
+.accesibilidad img{
+  max-width: 50px;
+  margin-left: 50px;
+}
+
+/* Clases cuando sean modo claro */
+.bodyTemaClaro{
+  background-color: #f9fafa;
+  color: #000000;
+}
+.navegacionClaro {
+ 
+  background-color: #f9fafa;
+  padding-right: 0;
+  border-bottom: 2px solid #df0713;
+}
+.menuElementoClaro {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  margin-left: 1rem;
+}
+
+.bodyTemaClaro navegacion menuElemento:hover {
+  background-color: #f9fafa;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.archivarTablaClaro {
+  float: right;
+  margin-right: 5rem;
+  background-color: #f9fafa;
+  width: 15rem;
+  height: 5rem;
+}
+.archivarTablaClaro:hover {
+  background-color: #c3c3c3;
 }
