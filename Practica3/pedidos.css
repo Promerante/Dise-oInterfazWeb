@@ -113,9 +113,9 @@ input[type="text"] {
 }
 /*HEADER COMPLETADO. IMPORTANTE:pese a que puede llamar a nav y editarlo tal cual,
   para reutilizar codigo opto por tambien ponerle sus respectivas clases.*/
-  main div table{
-    text-align: center;
-  }
+main div table {
+  text-align: center;
+}
 .tablaPedidos {
   justify-self: center;
   border-collapse: collapse;
@@ -153,17 +153,17 @@ td > button {
 .archivarTabla:hover {
   background-color: #242527;
 }
-#buscadorTablaContainer{
-  background-color: #C3C3C3;
+#buscadorTablaContainer {
+  background-color: #c3c3c3;
   display: flex;
   justify-content: center;
 }
-.buscadorTabla{
+.buscadorTabla {
   padding-left: 0;
   padding-right: 0;
   display: flex;
 }
-.buscadorTablaInput{
+.buscadorTablaInput {
   font-size: x-large;
   width: 20%;
   height: 50px;
@@ -174,7 +174,7 @@ td > button {
   -o-border-radius: 100px;
 }
 
-.buscadorTablaSubmit:hover{
+.buscadorTablaSubmit:hover {
   font-size: x-large;
   width: 40%;
   height: 50px;
@@ -202,7 +202,7 @@ td > button {
 .contCopyright {
   font-size: x-large;
 }
-.accesibilidadContainer{
+.accesibilidadContainer {
   margin-top: 10px;
   display: flex;
   justify-self: center;
@@ -211,7 +211,6 @@ td > button {
   display: block;
   font-size: x-large;
   margin-bottom: 10px;
- 
 }
 .accesibilidad img {
   max-width: 50px;
@@ -234,7 +233,7 @@ td > button {
   padding: 10px;
   margin-left: 1rem;
 }
-.menuElementoClaro:hover{
+.menuElementoClaro:hover {
   color: #f9fafa;
 }
 
@@ -256,20 +255,18 @@ td > button {
 .archivarTablaClaro:hover {
   background-color: #c3c3c3;
 }
-@media (max-width:1070px) {
-  
-  .contAcciones{
+@media (max-width: 1070px) {
+  .contAcciones {
     display: grid;
     gap: 10px;
   }
 }
-@media (max-width:800px) {
-  
-  .imagen{
+@media (max-width: 800px) {
+  .imagen {
     display: none;
   }
 }
-@media (max-width:830px) {
+@media (max-width: 830px) {
   .navegacion {
     gap: 0px;
     grid-template-rows: repeat(3, 1fr);
@@ -277,49 +274,62 @@ td > button {
     justify-content: center;
     font-size: xx-large;
     gap: 20px;
-    max-width: 600px; }
+    max-width: 600px;
+  }
 
   .contLogo {
-    justify-self: center; }
+    justify-self: center;
+  }
 
   .contLogo > img {
     width: fit-content;
     min-width: 250px;
-    max-width: 300px; }
+    max-width: 300px;
+  }
 
   .menu {
     grid-template-columns: repeat(1, 2fr);
-    justify-self: center; }
+    justify-self: center;
+  }
 
   .contCarrito {
-    justify-self: center; }
+    justify-self: center;
+  }
 
   .contCarrito > img {
     width: fit-content;
     min-width: 150px;
-    max-width: 200px; }
+    max-width: 200px;
+  }
 
   .contBuscador {
     width: 100%;
     background-color: #242527;
     height: 3rem;
     padding-bottom: 10px;
-    margin: 0; }
+    margin: 0;
+  }
 
   .buscador {
     min-width: 100%;
     align-items: center;
     background-color: #090809;
     width: 100%;
-    height: 100%; }
-    .piePagina {
-      width: 100%;
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, 600px);
-      font-size: smaller;
-      gap: 10px;
-      max-width: 600px; }
-  
-
+    height: 100%;
+  }
+  .piePagina {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 600px);
+    font-size: smaller;
+    gap: 10px;
+    max-width: 600px;
+  }
 }
-
+/* Ajustes para el index */
+.listaIndice {
+  list-style: none;
+}
+.listaIndice li {
+  margin-bottom: 10px;
+}

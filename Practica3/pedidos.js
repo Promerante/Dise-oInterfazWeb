@@ -24,7 +24,6 @@ $(document).ready(function () {
       //*CASO DE QUE LA TABLA PIERDA SU ULTIMO ELEMENTO PASANDOLO A LA OTRA
       alert("Has pulsado para cambiar la ultima fila que tenia la tabla");
       tabla.closest("div").css("display", "none");
-      console.log(tabla.find("tr").length);
     }
   });
 
@@ -43,17 +42,17 @@ $(document).ready(function () {
   });
 
   $(".archivarTodo").click(function () {
-    var container=$(this).closest("div")
-    var tabla=container.find("table")
+    var container = $(this).closest("div");
+    var tabla = container.find("table");
     var filas = tabla.find("tr");
     $.each(filas, function (nodo, valor) {
-      if(nodo!=0){
+      if (nodo != 0) {
         //Para que no tome el nodo donde esta puesto id,imagen,fecha....
         $(valor).remove();
       }
     });
-   container.css("display","none")
-   //Hacemos invisible el contenedor
+    container.css("display", "none");
+    //Hacemos invisible el contenedor
   });
 
   $("#cambiarTema").click(function () {
@@ -104,7 +103,7 @@ $(document).ready(function () {
       $(".archivarTablaClaro").removeClass("archivarTablaClaro");
     }
   });
-  $(".buscadorTablaInput").on("keyup",function () {
+  $(".buscadorTablaInput").on("keyup", function () {
     // Con este evento hacemos que siempre que se introduzca un valor en el buscador de las tablas empieze a buscar
     var busqueda = $(this).val();
     var tabla = $(this).closest("table");
@@ -112,32 +111,30 @@ $(document).ready(function () {
     var filas = tabla.find("tr");
     // Con esto "filas" contiene todas las filas de la tabla mas cercana
     $.each(filas, function (indice, valor) {
-      if(indice!=0){
+      if (indice != 0) {
         // Para que no busque en la primera fila que tiene los titulos
-        arrayID[indice]=$(valor).find("td:first").text().includes(busqueda);
-        $(valor).toggle(arrayID[indice])
-        // Ahora la arrayId contiene el texto de las primeras celdas de cada fila  
+        arrayID[indice] = $(valor).find("td:first").text().includes(busqueda);
+        $(valor).toggle(arrayID[indice]);
+        // Ahora la arrayId contiene el texto de las primeras celdas de cada fila
       }
     });
   });
-  $("#cambiarFuente").click(function(){
-    var cambiar=$(this).text();
-    if(cambiar=="Aumentar Tamaño"){
+  $("#cambiarFuente").click(function () {
+    var cambiar = $(this).text();
+    if (cambiar == "Aumentar Tamaño") {
       //*Caso aumentar tamaño
-      $("*").each(function(){
+      $("*").each(function () {
         //Esto lo hacemos para que lo haga en cada elemento html(a eso se refiere el *)
-        var tamaño=parseInt($(this).css("font-size"))
-        $(this).css("font-size",`${tamaño+1}px`)
-      })
-      $(this).text("Disminuir Tamaño")
-    }else{
-      $("*").each(function(){
-        var tamaño=parseInt($(this).css("font-size"))
-        $(this).css("font-size",`${tamaño-1}px`)
-      })
-      $(this).text("Aumentar Tamaño")
+        var tamaño = parseInt($(this).css("font-size"));
+        $(this).css("font-size", `${tamaño + 1}px`);
+      });
+      $(this).text("Disminuir Tamaño");
+    } else {
+      $("*").each(function () {
+        var tamaño = parseInt($(this).css("font-size"));
+        $(this).css("font-size", `${tamaño - 1}px`);
+      });
+      $(this).text("Aumentar Tamaño");
     }
-
-  })
-
+  });
 });

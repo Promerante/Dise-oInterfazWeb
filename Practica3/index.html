@@ -1,22 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indice</title>
     <link rel="stylesheet" href="pedidos.css" />
     <link rel="icon" href="imagenes/logo/logoICONRAW.png" />
-</head>
-<body>
-    <pre>
-        contenido:
-        Facundo Daniel Benítez Noguera
-        Juegos de mesa
-        Listado de funciones Jquery
-        Links a todos los HTML CSS y scripts generados
-        Listado de otras herramientas tecnologías fuentes URLs de recursos utilizados,
-        conocimientos y o metodologías aplicadas para la ejecución de cada página.
-        (opcional):licensias.
-    </pre>
-</body>
+  </head>
+  <body>
+    <table class="tablaPedidos">
+      <tr>
+        <th>Nombre y apellido:</th>
+        <td>Facundo Daniel Benítez Noguera</td>
+      </tr>
+      <tr>
+        <th>Tipo de tienda:</th>
+        <td>Tienda de juegos de mesa</td>
+      </tr>
+      <tr>
+        <th>Lista de funciones Jquery:</th>
+        <td>
+          <ul class="listaIndice">
+            <li>
+              Closest(X):Busca y devuelve el primer nodo padre que recibe(X)
+            </li>
+            <li>attr():devuelve el valor que tenga el atributo introducido</li>
+            <li>
+              append(X):mueve el elemento dado X y lo mueve al nodo que reliza
+              la funcion
+            </li>
+            <li>
+              css():devuelve o cambia el valor del atributo css del nodo que
+              realiza la funcion
+            </li>
+            <li>
+              find():devuelve todos los nodos hijos que se introduzca como
+              paramentro del elemento que lo realice
+            </li>
+            <li>remove():elimina el nodo que realice la funcion</li>
+            <li>
+              .each():es el equivalente al for-each de JQUERY,util para que los
+              elementos realicen la misma funcion.
+            </li>
+            <li>
+              .click():establece la funcion dada para que se dispare cuando se
+              clicke el elemento dado
+            </li>
+            <li>.addClass:otorga la clase dada al elemento en cuestion</li>
+            <li>
+              .toggleClass:cambia la clase actual del elemento por la
+              introducida
+            </li>
+            <li>.removeClass():elimina la clase introducida</li>
+            <li>
+              .on():otorga al elemento que lo realice un evento(como keyup) y la
+              funcion que disparará la misma
+            </li>
+            <li>val():recoge o cambia el valor de un atributo al nodo</li>
+            <li>text():recoge o cambia el texto al nodo</li>
+            <li>
+              includes():devuelve un booleano segun SI esta el parametro dado en
+              el elemento que lo realice
+            </li>
+            <li>
+              parseInt():cambia el parametro introducido a uno formato Int
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>Enlaces de la pagina:</th>
+        <td>
+          <ul class="listaIndice">
+            <li><a href="index.html">Indice</a></li>
+            <li><a href="pedidos.html">Pedidos</a></li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr>
+        <th>Tecnologías</th>
+        <td>
+          <a
+            class="menuElemento BlackFriday archivar"
+            href="https://api.jquery.com/"
+            >Documentacion jquery
+          </a>
+          <a
+            class="menuElemento BlackFriday archivar"
+            href="https://www.w3schools.com/jquery/default.asp"
+            >W3Schools
+          </a>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
