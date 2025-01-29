@@ -87,9 +87,7 @@ $(document).ready(function () {
       $("footer").css("background-color","#242527")
       $(".tablaPedidos th, .tablaPedidos td").css("border","2px solid whitesmoke")
       $(".tablaArchivados th, .tablaPedidos td").css("border","2px solid whitesmoke")
-
-// MIRAR ESTO:SIGUE SIN VOLVER TOTALMENTE A SU ESTADO ORIGINAL
-      $(".archivarTablaClaro").toggleClass("archivarTabla")
+      $(".archivarTablaClaro").removeClass("archivarTablaClaro")
       
     }
   });
