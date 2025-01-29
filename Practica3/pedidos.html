@@ -14,7 +14,11 @@
     <header>
       <nav class="navegacion">
         <div class="contLogo">
-          <img src="imagenes/logo/logo1Rectangulo.png" alt="Logo" class="imagenOscuro" />
+          <img
+            src="imagenes/logo/logo1Rectangulo.png"
+            alt="Logo"
+            class="imagenOscuro"
+          />
         </div>
         <div class="menu">
           <a href="#" class="menuElemento">Acerca de nosotros</a>
@@ -45,14 +49,23 @@
           <!-- Encabezado -->
           <tr>
             <th>Código:</th>
-            <th>Imagen:</th>
+            <th class="imagen">Imagen:</th>
             <th>Fecha:</th>
             <th>Importe:</th>
-            <th>Acciones:</th>
+            <th id="buscadorTablaContainer">
+              <div class="buscadorTabla">
+                <input
+                  type="text"
+                  placeholder="Buscar..."
+                  class="buscadorTablaInput"
+                />
+               
+              </div>
+            </th>
           </tr>
           <tr>
             <td>123</td>
-            <td>
+            <td class="imagen">
               <img src="imagenes/logo/logoICONRAW.png" alt="" />
             </td>
             <td>27/01/2025</td>
@@ -66,7 +79,7 @@
           </tr>
           <tr>
             <td>415</td>
-            <td>
+            <td class="imagen">
               <img src="imagenes/logo/logoICONRAW.png" alt="" />
             </td>
             <td>20/12/2024</td>
@@ -81,7 +94,7 @@
 
           <tr>
             <td>567</td>
-            <td>
+            <td class="imagen">
               <img src="imagenes/logo/logoICONRAW.png" alt="" />
             </td>
             <td>20/11/2024</td>
@@ -95,7 +108,7 @@
           </tr>
         </table>
         <br /><br />
-        <button class="archivarTabla menuElemento BlackFriday" id="archivarTabla">
+        <button class="archivarTabla menuElemento BlackFriday archivarTodo">
           Archivar tabla
         </button>
       </div>
@@ -108,15 +121,23 @@
           <!-- Encabezado -->
           <tr>
             <th>Código:</th>
-            <th>Imagen:</th>
+            <th class="imagen">Imagen:</th>
             <th>Fecha:</th>
             <th>Importe:</th>
-            <th>Acciones:</th>
+            <th id="buscadorTablaContainer">
+              <div class="buscadorTabla">
+                <input
+                  type="text"
+                  placeholder="Buscar..."
+                  class="buscadorTablaInput"
+                />
+              
+              </div>
+            </th>
           </tr>
-
           <tr>
             <td>987</td>
-            <td>
+            <td class="imagen">
               <img src="imagenes/logo/logoICONRAW.png" alt="" />
             </td>
             <td>27/01/2025</td>
@@ -133,7 +154,7 @@
 
           <tr>
             <td>765</td>
-            <td>
+            <td class="imagen">
               <img src="imagenes/logo/logoICONRAW.png" />
             </td>
             <td>20/12/2024</td>
@@ -148,7 +169,7 @@
 
           <tr>
             <td>543</td>
-            <td>
+            <td class="imagen">
               <img src="imagenes/logo/logoICONRAW.png" alt="" />
             </td>
             <td>20/11/2024</td>
@@ -163,6 +184,10 @@
             </td>
           </tr>
         </table>
+        <br /><br />
+        <button class="archivarTabla menuElemento BlackFriday archivarTodo">
+          Archivar tabla
+        </button>
       </div>
     </main>
     <br /><br /><br /><br />
@@ -178,15 +203,16 @@
       </div>
       <div class="accesibilidad">
         <span>Accesibilidad</span>
-
-        <img src="imagenes/accesibilidad/modo-oscuro.png" alt="Cambiar tema" id="cambiarTema" />
+        <div class="accesibilidadContainer">
+          <img
+          src="imagenes/accesibilidad/modo-oscuro.png"
+          alt="Cambiar tema"
+          id="cambiarTema"
+        />
         <!-- Cambiar tema licensia:<a href="https://www.flaticon.es/iconos-gratis/modo-oscuro" 
          title="modo oscuro iconos">Modo oscuro iconos creados por Icon Hubs - Flaticon</a> -->
-        <img
-          src="#"
-          alt="Disminuir tamaño"
-        />
-        <img src="#" alt="Aumentar tamaño" />
+         <a  class="menuElemento BlackFriday" id="cambiarFuente">Aumentar Tamaño</a>
+        </div> 
       </div>
     </footer>
   </body>

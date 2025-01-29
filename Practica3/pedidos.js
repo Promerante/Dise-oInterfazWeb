@@ -27,6 +27,7 @@ $(document).ready(function () {
       console.log(tabla.find("tr").length);
     }
   });
+
   $(".eliminar").click(function () {
     // Caso click en los botones eliminar
     let tabla = $(this).closest("table");
@@ -40,17 +41,19 @@ $(document).ready(function () {
       $(this).closest("tr").remove();
     }
   });
-  $("#archivarTabla").click(function () {
-    var tablaPendiente = $("#pendiente").find("tr");
-    var tablaArchivados = $("#archivados");
-    $.each(tablaPendiente, function (nodo, valor) {
-      if (nodo != 0) {
+
+  $(".archivarTodo").click(function () {
+    var container=$(this).closest("div")
+    var tabla=container.find("table")
+    var filas = tabla.find("tr");
+    $.each(filas, function (nodo, valor) {
+      if(nodo!=0){
         //Para que no tome el nodo donde esta puesto id,imagen,fecha....
-        tablaArchivados.append(valor);
+        $(valor).remove();
       }
     });
-    $("#contArchivados").css("display", "block");
-    $("#contPendiente").css("display", "none");
+   container.css("display","none")
+   //Hacemos invisible el contenedor
   });
 
   $("#cambiarTema").click(function () {
@@ -66,12 +69,17 @@ $(document).ready(function () {
       });
       $(".menuElemento").toggleClass("menuElementoClaro");
       $(".contCarrito img").attr("src", "imagenes/carrito.png");
-      $(".contBuscador").css("background-color","#c3c3c3")
-      $("footer").css("background-color","#c3c3c3")
-      $(".tablaPedidos th, .tablaPedidos td").css("border","2px solid #000000")
-      $(".tablaArchivados th, .tablaPedidos td").css("border","2px solid #000000")
-      $(".archivarTabla").toggleClass("archivarTablaClaro")
-  
+      $(".contBuscador").css("background-color", "#c3c3c3");
+      $("footer").css("background-color", "#c3c3c3");
+      $(".tablaPedidos th, .tablaPedidos td").css(
+        "border",
+        "2px solid #000000"
+      );
+      $(".tablaArchivados th, .tablaPedidos td").css(
+        "border",
+        "2px solid #000000"
+      );
+      $(".archivarTabla").toggleClass("archivarTablaClaro");
     } else {
       // *CASO fondo claro
       $("body").removeClass("bodyTemaClaro");
@@ -83,12 +91,53 @@ $(document).ready(function () {
       });
       $(".menuElemento").toggleClass("menuElementoClaro");
       $(".contCarrito img").attr("src", "imagenes/carritoBlanco.png");
-      $(".contBuscador").css("background-color","#242527")
-      $("footer").css("background-color","#242527")
-      $(".tablaPedidos th, .tablaPedidos td").css("border","2px solid whitesmoke")
-      $(".tablaArchivados th, .tablaPedidos td").css("border","2px solid whitesmoke")
-      $(".archivarTablaClaro").removeClass("archivarTablaClaro")
-      
+      $(".contBuscador").css("background-color", "#242527");
+      $("footer").css("background-color", "#c3c3c3");
+      $(".tablaPedidos th, .tablaPedidos td").css(
+        "border",
+        "2px solid whitesmoke"
+      );
+      $(".tablaArchivados th, .tablaPedidos td").css(
+        "border",
+        "2px solid whitesmoke"
+      );
+      $(".archivarTablaClaro").removeClass("archivarTablaClaro");
     }
   });
+  $(".buscadorTablaInput").on("keyup",function () {
+    // Con este evento hacemos que siempre que se introduzca un valor en el buscador de las tablas empieze a buscar
+    var busqueda = $(this).val();
+    var tabla = $(this).closest("table");
+    var arrayID = [];
+    var filas = tabla.find("tr");
+    // Con esto "filas" contiene todas las filas de la tabla mas cercana
+    $.each(filas, function (indice, valor) {
+      if(indice!=0){
+        // Para que no busque en la primera fila que tiene los titulos
+        arrayID[indice]=$(valor).find("td:first").text().includes(busqueda);
+        $(valor).toggle(arrayID[indice])
+        // Ahora la arrayId contiene el texto de las primeras celdas de cada fila  
+      }
+    });
+  });
+  $("#cambiarFuente").click(function(){
+    var cambiar=$(this).text();
+    if(cambiar=="Aumentar Tamaño"){
+      //*Caso aumentar tamaño
+      $("*").each(function(){
+        //Esto lo hacemos para que lo haga en cada elemento html(a eso se refiere el *)
+        var tamaño=parseInt($(this).css("font-size"))
+        $(this).css("font-size",`${tamaño+1}px`)
+      })
+      $(this).text("Disminuir Tamaño")
+    }else{
+      $("*").each(function(){
+        var tamaño=parseInt($(this).css("font-size"))
+        $(this).css("font-size",`${tamaño-1}px`)
+      })
+      $(this).text("Aumentar Tamaño")
+    }
+
+  })
+
 });

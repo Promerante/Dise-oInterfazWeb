@@ -112,7 +112,10 @@ input[type="text"] {
   margin: 0;
 }
 /*HEADER COMPLETADO. IMPORTANTE:pese a que puede llamar a nav y editarlo tal cual,
-  para reutilizar codigo opto por tambien ponerle sus respectivas clases.Lo mismo con MAIN*/
+  para reutilizar codigo opto por tambien ponerle sus respectivas clases.*/
+  main div table{
+    text-align: center;
+  }
 .tablaPedidos {
   justify-self: center;
   border-collapse: collapse;
@@ -150,8 +153,36 @@ td > button {
 .archivarTabla:hover {
   background-color: #242527;
 }
-.piePagina {
+#buscadorTablaContainer{
+  background-color: #C3C3C3;
+  display: flex;
+  justify-content: center;
+}
+.buscadorTabla{
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+}
+.buscadorTablaInput{
+  font-size: x-large;
+  width: 20%;
+  height: 50px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.buscadorTablaSubmit:hover{
+  font-size: x-large;
+  width: 40%;
+  height: 50px;
   background-color: #242527;
+  color: #f9fafa;
+}
+.piePagina {
+  background-color: #c3c3c3;
   height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -160,6 +191,7 @@ td > button {
   margin: 0;
   margin-top: 2rem;
   border-top: 2px solid #df0713;
+  color: #000000;
 }
 
 .piePagina > .contLogo > img {
@@ -170,26 +202,28 @@ td > button {
 .contCopyright {
   font-size: x-large;
 }
-
-.accesibilidad span{
+.accesibilidadContainer{
+  margin-top: 10px;
+  display: flex;
+  justify-self: center;
+}
+.accesibilidad a {
   display: block;
   font-size: x-large;
-  margin-bottom: 20px;
-  margin-left: 50px;
-
+  margin-bottom: 10px;
+ 
 }
-.accesibilidad img{
+.accesibilidad img {
   max-width: 50px;
   margin-left: 50px;
 }
 
 /* Clases cuando sean modo claro */
-.bodyTemaClaro{
+.bodyTemaClaro {
   background-color: #f9fafa;
   color: #000000;
 }
 .navegacionClaro {
- 
   background-color: #f9fafa;
   padding-right: 0;
   border-bottom: 2px solid #df0713;
@@ -199,6 +233,9 @@ td > button {
   text-decoration: none;
   padding: 10px;
   margin-left: 1rem;
+}
+.menuElementoClaro:hover{
+  color: #f9fafa;
 }
 
 .bodyTemaClaro navegacion menuElemento:hover {
@@ -219,3 +256,70 @@ td > button {
 .archivarTablaClaro:hover {
   background-color: #c3c3c3;
 }
+@media (max-width:1070px) {
+  
+  .contAcciones{
+    display: grid;
+    gap: 10px;
+  }
+}
+@media (max-width:800px) {
+  
+  .imagen{
+    display: none;
+  }
+}
+@media (max-width:830px) {
+  .navegacion {
+    gap: 0px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    justify-content: center;
+    font-size: xx-large;
+    gap: 20px;
+    max-width: 600px; }
+
+  .contLogo {
+    justify-self: center; }
+
+  .contLogo > img {
+    width: fit-content;
+    min-width: 250px;
+    max-width: 300px; }
+
+  .menu {
+    grid-template-columns: repeat(1, 2fr);
+    justify-self: center; }
+
+  .contCarrito {
+    justify-self: center; }
+
+  .contCarrito > img {
+    width: fit-content;
+    min-width: 150px;
+    max-width: 200px; }
+
+  .contBuscador {
+    width: 100%;
+    background-color: #242527;
+    height: 3rem;
+    padding-bottom: 10px;
+    margin: 0; }
+
+  .buscador {
+    min-width: 100%;
+    align-items: center;
+    background-color: #090809;
+    width: 100%;
+    height: 100%; }
+    .piePagina {
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 600px);
+      font-size: smaller;
+      gap: 10px;
+      max-width: 600px; }
+  
+
+}
+
