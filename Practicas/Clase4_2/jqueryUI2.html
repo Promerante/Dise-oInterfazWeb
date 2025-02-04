@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery UI Droppable - Default functionality</title>
+
+    <link rel="stylesheet" href="../../jquery-ui-1.14.1/jquery-ui.min.css" />
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+    <script src="../../jquery-ui-1.14.1/jquery-ui.min.js"></script>
+    <style>
+        .cont{
+            width: 200px;
+            height: 200px;
+        }
+      #draggable {
+        width: 100px;
+        height: 100px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px 10px 10px 0;
+      }
+      #droppable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+        float: left;
+        margin: 10px;
+      }
+
+      #feedback {
+        font-size: 1.4em;
+      }
+      #selectable .ui-selecting {
+        background: #feca40;
+      }
+      #selectable .ui-selected {
+        background: #f39814;
+        color: white;
+      }
+      #selectable {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 60%;
+      }
+      #selectable li {
+        margin: 3px;
+        padding: 0.4em;
+        font-size: 1.4em;
+        height: 18px;
+      }
+    </style>
+
+    <script>
+      $(function () {
+        $("#draggable").draggable();
+        $("#droppable").droppable({
+          drop: function (event, ui) {
+            $(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+          },
+        });
+      });
+    </script>
+    <script>
+      $(function () {
+        $("#resizable").resizable();
+      });
+    </script>
+    <script>
+      $(function () {
+        $("#sortable").sortable();
+      });
+    </script>
+    <script>
+      $(function () {
+        $("#selectable").selectable();
+      });
+    </script>
+    <script>
+    $( function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      }
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+   
+        </script>
+  </head>
+  <body style="display: flex">
+    <div class="cont">
+      <div id="draggable" class="ui-widget-content">
+        <p>Drag me to my target</p>
+      </div>
+
+      <div id="droppable" class="ui-widget-header">
+        <p>Drop here</p>
+      </div>
+    </div>
+
+    <div class="cont">
+      <div id="resizable" class="ui-widget-content">
+        <h3 class="ui-widget-header">Resizable</h3>
+      </div>
+    </div>
+    <div class="cont">
+      <ul id="sortable">
+        <li class="ui-state-default">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1
+        </li>
+        <li class="ui-state-default">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2
+        </li>
+        <li class="ui-state-default">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3
+        </li>
+        <li class="ui-state-default">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4
+        </li>
+        <li class="ui-state-default">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5
+        </li>
+        <li class="ui-state-default">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6
+        </li>
+        <li class="ui-state-default">
+          <span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7
+        </li>
+      </ul>
+    </div>
+    <div class="cont">
+      <ol id="selectable">
+        <li class="ui-widget-content">Item 1</li>
+        <li class="ui-widget-content">Item 2</li>
+        <li class="ui-widget-content">Item 3</li>
+        <li class="ui-widget-content">Item 4</li>
+        <li class="ui-widget-content">Item 5</li>
+        <li class="ui-widget-content">Item 6</li>
+        <li class="ui-widget-content">Item 7</li>
+      </ol>
+    </div>
+    <div class="cont">
+        <form action="">
+            <label for="">Titulo</label>
+            <input type="text">
+            <label for="">Autor</label>
+            <input type="text">
+            <label for="">Fecha</label>
+            <input type="text" id="datepicker">
+            
+            <div id="dialog" title="Basic dialog">
+                <p>Subido</p>
+              </div>
+               
+              <button id="opener">Open Dialog</button>
+        </form>
+    </div>
+  </body>
+</html>

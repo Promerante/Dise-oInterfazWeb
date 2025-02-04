@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Dialog - Animation</title>
+    <link rel="stylesheet" href="../../jquery-ui-1.14.1/jquery-ui.min.css" />
+    <script src="../../jquery/jquery-3.7.1.min.js"></script>
+    <script src="../../jquery-ui-1.14.1/jquery-ui.min.js"></script>
+    <script>
+    $( function() {
+      $( "#dialog" ).dialog({
+        autoOpen: false,
+        show: {
+          effect: "blind",
+          duration: 1000
+        },
+        hide: {
+          effect: "explode",
+          duration: 1000
+        }
+      });
+   
+      $( "#opener" ).on( "click", function() {
+        if($(".titulo").val() !=""){
+            $( "#dialog" ).dialog( "open" );
+        }
+    
+      });
+    } );
+    </script>
+  </head>
+  <body>
+    <form action="">
+        <label for="">Titulo</label>
+        <input type="text" class="titulo">
+        <label for="">Autor</label>
+        <input type="text">
+        <label for="">Fecha</label>
+        <input type="text" id="datepicker">
+        
+       
+    </form>
+  <div id="dialog" title="Basic dialog">
+    <p class="txt">Subido</p>
+  </div>
+   
+  <button id="opener">Open Dialog</button>
+   
+   
+   
+   
+  </body></html>
