@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventana Emergente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="botonEmergente">Abrir Ventana Emergente</button>
+    <body>
+        <button id="botonEmergente">Abrir Ventana Emergente</button>
+      
+        <!-- Ventana Emergente -->
+        <div id="ventanaEmergente" class="escondido">
+          <div class="popup-content">
+            <h2>Formulario</h2>
+            <form id="formularioEmergente">
+              <label for="pais">Selecciona tu país:</label><br>
+              <select id="pais" name="pais" required>
+                <option value="" disabled selected>--Selecciona un país--</option>
+                <option value="+34">España</option>
+                <option value="+1">Estados Unidos</option>
+                <option value="+44">Reino Unido</option>
+                <option value="+49">Alemania</option>
+                <option value="+81">Japón</option>
+              </select><br><br>
+      
+              <label for="movil">Móvil:</label>
+              <div style="display: flex;">
+                <input type="text" id="prefijo" name="prefijo" value="" readonly style="width: 60px; text-align: center;">
+                <input type="text" id="numero" name="numero" placeholder="123456789" required style="flex: 1; margin-left: 5px;">
+              </div>
+      
+              <button type="submit">Enviar</button>
+              <button type="button" id="cerrarVentana">Cerrar</button>
+            </form>
+          </div>
+        </div>
+      
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+      </body>
+      
+  
+  
+  
+</html>

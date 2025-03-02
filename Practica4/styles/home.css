@@ -80,7 +80,7 @@ nav {
   background-color: #090809;
   border: none;
   outline: none;
-  width: 100%;
+  width: 90%;
   height: 100%;
   color: #f9fafa;
   margin: 0;
@@ -100,18 +100,17 @@ nav {
     margin-left: 1rem;(tener cuidado a pantallas cortas
     contenedorCarrito 
       margin-right: 30px;
-    
-
 */
 main {
-  margin: 0 15px;
+  margin: 20px 15px;
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: 1fr 1fr;
   height: 100vh;
-  gap: 10px;
+  gap: 20px;
 }
 .menuCategoria {
+  max-width: 500px;
   text-align: center;
   font-size: x-large;
   display: grid;
@@ -120,7 +119,7 @@ main {
   grid-row: 1 / 2;
   align-self: start;
   padding: 10px;
-  background-color: #f5f5f5; 
+ 
 }
 .menuMain {
   margin-left: 0;
@@ -173,6 +172,8 @@ main {
   grid-template-rows: auto 2rem;
   gap: 1rem;
   justify-content: center;
+  max-height: 300px;
+  align-items: center;
 }
 
 .elementoHome > img {
@@ -311,6 +312,7 @@ main {
     height: 3rem;
     padding-bottom: 10px;
     margin: 0;
+    margin-bottom: 20px;
   }
 
   .buscador {

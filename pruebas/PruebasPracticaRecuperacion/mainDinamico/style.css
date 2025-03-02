@@ -1,0 +1,52 @@
+body {
+    display: flex; /* Activa Flexbox para gestionar aside y main */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* El contenedor ocupa toda la altura */
+    overflow: hidden;
+  }
+  
+  aside {
+    width: 250px; /* Ancho del aside */
+    background-color: #000000;
+    position: relative;
+    left: -250px; /* Oculto fuera de la pantalla inicialmente */
+    height: 100%;
+    transition: left 0.3s ease; /* Animación suave para el movimiento del aside */
+    overflow-y: auto;
+  }
+  
+  main {
+    flex: 1;
+    /*Ocupatodoelespaciorestanteinicialmente*/
+    /*Ajustaelmargensuavemente*/background-color: #f4f4f4;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    -webkit-transition: margin-left 0.3s ease;
+    -moz-transition: margin-left 0.3s ease;
+    -ms-transition: margin-left 0.3s ease;
+    -o-transition: margin-left 0.3s ease;
+}
+  
+  main.shrink {
+    margin-left: 250px; /* Ajusta para dejar espacio al aside */
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #0056b3;
+  }
+  

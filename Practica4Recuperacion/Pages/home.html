@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Practica 4 Recuperación</title>
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="icon" href="../images/logos/logo.png" type="image/png" />
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/homeScripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="contLogo" href="home.html">
+          <img
+            src="../images/logos/logo.png"
+            alt="Logo"
+            class="logoHeader hoverAgranda"
+            title="logo"
+          />
+          <!-- Meto la class hoverAgranda para implementar funcionalidad deseada -->
+        </a>
+        <div class="menu">
+          <a href="#" class="boton1">Acerca de nosotros</a>
+          <!-- Vínculo a especificaciones de la página,como licensias y demas.Por ver: -->
+          <a href="#" class="boton1" id="Categoria">Categorías</a>
+          <!-- Con este boton desplegamos el menu vertical que tendra la pagina,ALTER:☰-->
+          <a href="#" class="boton1" id="recibirOfertas">Recibir Ofertas</a>
+          <!-- Aqui implementaremos la funcionalidades deseadas -->
+          <a href="blackFriday.html" class="boton1 bordeado">Black Friday</a>
+        </div>
+        <div class="contenedorCarrito">
+          <a class="contCarrito" href="#">
+            <img
+              src="../images/iconos/carritoBlanco.png"
+              alt="Carrito"
+              class="carrito hoverAgranda"
+              title="Carrito"
+            />
+          </a>
+        </div>
+      </nav>
+      <div class="contBuscador">
+        <!-- Contenedor para el buscador -->
+        <div class="buscador">
+          <img
+            src="../images/iconos/lupa.png"
+            alt="lupa"
+            title="Buscar"
+            class="lupaImg hoverAgranda"
+          />
+          <!-- Importante meterle un evento cuando se de click funcione como buscador -->
+          <input id="buscadorHeader" type="text" placeholder="Buscar..." />
+        </div>
+      </div>
+    </header>
+    <main>
+      <aside>
+        <ul>
+          <li>
+            <img
+              src="../images/iconos/IcOrdenadores.png"
+              alt="Ordenadores"
+              id="Ordenadores"
+              class="imgAside"
+            />
+            <a href="#cat1" class="categoria" id="ordenadoresLink"
+              >Ordenadores y portátiles</a
+            >
+          </li>
+          <li>
+            <img
+              src="../images/iconos/IcComponentes.png"
+              alt="Componentes"
+              title="Componentes"
+              class="imgAside"
+            />
+            <a href="#cat2" class="categoria">Componentes</a>
+          </li>
+          <li>
+            <img
+              src="../images/iconos/IcPerifericos.png"
+              alt="Periféricos"
+              title="Periféricos"
+              id="Periféricos"
+              class="imgAside"
+            />
+            <a href="#cat3" class="categoria">Periféricos</a>
+          </li>
+          <li>
+            <img
+              src="../images/iconos/IcCasa.png"
+              alt="Casa"
+              title="Casa"
+              id="Casa"
+              class="imgAside"
+            />
+            <a href="#cat4" class="categoria">Hogar</a>
+          </li>
+        </ul>
+      </aside>
+      <div class="CategoriasProductos">
+        <div class="categorias">
+          <div class="elementoHome">
+            <img
+              src="../images/imagenes/portatil.jpg "
+              alt="Portatil"
+
+            />
+            <span>Ordenadores y Portatiles</span>
+          </div>
+          <div class="categoria elementoHome">
+            <img
+              src="../images/imagenes/componentes.jpg"
+              alt="Componentes"
+     
+            />
+            <span>Componentes</span>
+          </div>
+          <div class="categoria elementoHome">
+            <img
+              src="../images/imagenes/perifericos.jpg "
+              alt="Periféricos"
+    
+            />
+            <span>Periféricos</span>
+          </div>
+          <div class="categoria elementoHome">
+            <img src="../images/imagenes/hogar.jpg" alt="Hogar"  />
+            <span>Hogar</span>
+          </div>
+        </div>
+        <div class="productos categorias">
+          <div class="categoria elementoHome">
+            <img src="../images/imagenes/hogar.jpg" alt="Hogar"/>
+            <span>Roomba</span>
+          </div>
+          <div class="categoria elementoHome">
+            <img
+              src="../images/imagenes/perifericos.jpg "
+              alt="Periféricos"
+              title="Periféricos"
+            />
+            <span>Auriculares Razork</span>
+          </div>
+          <div class="elementoHome">
+            <img
+              src="../images/imagenes/portatil.jpg "
+              alt="Portatil"
+              title="Portatil"
+            />
+            <span>MacBook Pro</span>
+          </div>
+          <div class="categoria elementoHome">
+            <img
+              src="../images/imagenes/componentes.jpg"
+              alt="Componentes"
+              title="Componentes"
+            />
+            <span>Intel I5 12400F</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>Hey soy el footer</footer>
+    <!-- Ventana Emergente -->
+    <div id="ventanaEmergente" class="escondido">
+      <div class="contenidoVentana">
+        <h2>Formulario</h2>
+        <form id="formularioEmergente">
+          <label for="nombre">Nombre:</label><br /><br/>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingresa tu nombre"
+            required
+          /><br /><br /><br />
+
+          <label for="email">Email:</label><br /><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ingresa tu email"
+            required
+          /><br /><br /><br />
+          <div class="selectorPais">
+            <label for="pais">Selecciona tu país:</label><br />
+            <select id="pais" name="pais" required>
+              <option value="" disabled selected>--Selecciona un país--</option>
+              <option value="+34">España</option>
+              <option value="+1">Estados Unidos</option>
+              <option value="+44">Reino Unido</option>
+              <option value="+49">Alemania</option>
+              <option value="+81">Japón</option></select
+            ><br /><br />
+          </div>
+          <label for="movil">Móvil:</label><br />
+          <div class="movilInput">
+            <input
+              type="text"
+              id="prefijo"
+              name="prefijo"
+              readonly
+              style="width: 60px; text-align: center"
+            />
+            <input
+              type="text"
+              id="numero"
+              name="numero"
+              placeholder="123456789"
+              required
+              style="flex: 1; margin-left: 5px"
+           
+            />
+               <!-- Meto el estilo directamente aqui por lo especifico que son -->
+          </div>
+          <button type="submit" class="boton2">Enviar</button>
+          <button type="button" id="cerrarVentana" class="boton2">
+            Cerrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

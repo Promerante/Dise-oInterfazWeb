@@ -1,0 +1,18 @@
+Boceto de la futura documentacion:
+    Cosas a consultar a oscar:
+        La presentacion se llevará a cabo?El trabajo puede no hacerlo posible
+/*
+    *HEADER COMPLETADO, ELEMENTOS CON TAMAÑOS FIJOS A TENER EN CUENTA:
+      logoHeader:
+        anchura: 150px;
+        altura: automatica(acorde a su anchura);
+        margin-left: 50px;
+        margin-right: 1rem;
+      menuElemento: 
+      padding: 10px;
+      margin-left: 1rem;(tener cuidado a pantallas cortas
+      contenedorCarrito 
+        margin-right: 30px;
+*/
+licensias:
+auriculares:https://www.pexels.com/es-es/foto/auriculares-negros-sobre-mesa-2510575/

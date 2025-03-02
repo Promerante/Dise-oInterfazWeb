@@ -1,0 +1,26 @@
+/* Botón para mostrar/ocultar el menú lateral */
+
+.toggle-menu {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .toggle-menu {
+        display: block;
+        width: 100%;
+    }
+
+    .menu-lateral {
+        display: none;
+        width: 100%;
+    }
+
+    .menu-lateral.active {
+        display: block;
+    }
+}

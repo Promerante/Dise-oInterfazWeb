@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.contenedor-imagen {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagen {
+    width: 100%;
+    position: absolute;
+    left: -100%; /* Oculta la imagen fuera del contenedor (a la izquierda) */
+    transition: all 0.5s ease;
+}

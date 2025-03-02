@@ -1,0 +1,66 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Botón para abrir/cerrar el menú */
+.toggle-menu {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+/* Menú lateral */
+.menu-categorias {
+    width: 250px;
+    background-color: #444;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculto fuera de la pantalla */
+    height: 100%;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.menu-categorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-categorias li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.menu-categorias a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+/* Subtipos (inicialmente ocultos) */
+.subtipos {
+    display: none; /* Oculta subtipos por defecto */
+    padding-left: 20px; /* Desplazamiento visual para jerarquía */
+}
+
+.menu-categorias li:hover > a {
+    background-color: #555;
+}
+
+/* Contenido principal */
+.contenido {
+    margin-left: 20px;
+    padding: 20px;
+}
