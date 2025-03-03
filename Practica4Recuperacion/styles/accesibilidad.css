@@ -1,0 +1,25 @@
+main {
+  margin-left: 20px;
+}
+ul {
+  list-style: none;
+}
+li {
+  font-size: x-large;
+}
+ul h2 {
+  margin: 0;
+  padding: 5rem;
+}
+ul h2:hover {
+  margin: 0;
+  padding: 5rem;
+  background-color: #242527;
+}
+b {
+  color: #df0713;
+}
+li ul {
+  display: none;
+  margin: 1em;
+}

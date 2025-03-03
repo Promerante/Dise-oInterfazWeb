@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accesibilidad Practica 4 Recuperación</title>
+    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="icon" href="../images/logos/logo.png" type="image/png" />
+    <script src="../scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/homeScripts.js"></script>
+    <!-- Metemos estos vinculos porque el nav es igual en todos -->
+    <link rel="stylesheet" href="../styles/accesibilidad.css" />
+    <script src="../scripts/accesibilidadScripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="contLogo" href="home.html">
+          <img
+            src="../images/logos/logo.png"
+            alt="Logo"
+            class="logoHeader hoverAgranda"
+            title="logo"
+          />
+          <!-- Meto la class hoverAgranda para implementar funcionalidad deseada -->
+        </a>
+        <div class="menu">
+          <a href="#" class="boton1">Acerca de nosotros</a>
+          <!-- Vínculo a especificaciones de la página,como licensias y demas.Por ver: -->
+          <a href="home.html" class="boton1" id="Categoria">Categorías</a>
+          <!-- Con este boton desplegamos el menu vertical que tendra la pagina,ALTER:☰-->
+          <a href="home.html" class="boton1" id="recibirOfertas"
+            >Recibir Ofertas</a
+          >
+          <!-- Aqui implementaremos la funcionalidades deseadas -->
+          <a href="blackFriday.html" class="boton1 bordeado">Black Friday</a>
+        </div>
+        <div class="contenedorCarrito">
+          <a class="contCarrito" href="#">
+            <img
+              src="../images/iconos/carritoBlanco.png"
+              alt="Carrito"
+              class="carrito hoverAgranda"
+              title="Carrito"
+            />
+          </a>
+        </div>
+      </nav>
+      <div class="contBuscador">
+        <!-- Contenedor para el buscador -->
+        <div class="buscador">
+          <img
+            src="../images/iconos/lupa.png"
+            alt="lupa"
+            title="Buscar"
+            class="lupaImg hoverAgranda"
+          />
+          <!-- Importante meterle un evento cuando se de click funcione como buscador -->
+          <input id="buscadorHeader" type="text" placeholder="Buscar..." />
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Criterios de accesibilidad de Home</h1>
+      <div class="container">
+        <ul>
+          <li>
+            <h2 class="criterios">Perceptible</h2>
+            <ul>
+              <li>
+                Textos alternativos, contraste correcto, correcta estructura
+                semantica
+              </li>
+              <li><b>Supera(AAA)</b></li>
+              <li>Fuentes:WAVE EVALUATION TOOL</li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="criterios">Operable</h2>
+            <ul>
+              <li>
+                Evita destellos, navegable por teclado,tiempo suficiente para
+                formularios
+              </li>
+              <li><b>Supera(AA)</b></li>
+              <li>
+                Fuentes: he probado yo mismo y lo único que le faltaría es poder
+                llegar a las categorias y productos por teclado, pero tiene
+                facil solución y lo he percibido poco relevante al no ser una
+                tienda de verdad. Solo haria falta meter las vinculaciones
+                oportunas
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="criterios">Comprensible</h2>
+            <ul>
+              <li>
+                Texto legible,comprensible,instrucciones claras,evitar errores
+              </li>
+              <li><b>Supera(A)</b></li>
+              <li>
+                Fuentes: he probado yo mismo y pedido opinion a conocidos y pese
+                al texto ser comprensible. Es algo confuso la navegacion entre
+                mis paginas.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="criterios">Robusto</h2>
+            <ul>
+              <li>Etiquetas de formularios oportunas, codigo validado</li>
+              <li><b>Supera(AAA)</b></li>
+              <li>Fuentes: W3C Validator</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <h1>Verificacion barreras para usuarios con dificultad de Home</h1>
+      <div class="container">
+        <ul>
+          <li>
+            <h2 class="criterios">Dificultad visual</h2>
+            <ul>
+              <li>Lectores de pantalla leen el contenido</li>
+              <li><b>No supera</b></li>
+              <li>Fuentes: lightHouse devTools</li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="criterios">Motora</h2>
+            <ul>
+              <li>Navegable a traves de teclado</li>
+              <li><b>Supera</b></li>
+              <li>Igual que el criterio operable</li>
+            </ul>
+          </li>
+          <li>
+            <h2 class="criterios">Auditiva</h2>
+            <ul>
+              <li>Videos con subtítulos</li>
+              <li><b>No procede</b></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <a class="contLogo" href="home.html">
+        <img
+          src="../images/logos/logo.png"
+          alt="Logo"
+          class="logoHeader"
+          title="logo"
+        />
+      </a>
+      <span
+        >Si desea ver la calificación de accesibilidad pulse
+        <a href="accesibilidad.html">aquí</a>,si desea ver licensias y el indice
+        general pulse el boton "Acerca de nosotros"</span
+      >
+    </footer>
+  </body>
+</html>

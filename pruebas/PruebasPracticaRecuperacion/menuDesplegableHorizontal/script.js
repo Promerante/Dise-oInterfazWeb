@@ -1,18 +1,20 @@
 $(document).ready(function() {
-    // Abrir/cerrar el menú lateral
-    $('.toggle-menu').click(function() {
-        let menu = $('.menu-categorias');
-        if (menu.css('left') === '-250px') {
-            menu.css('left', '0');
-        } else {
-            menu.css('left', '-250px');
-        }
+    // Cuando se hace clic en una categoría
+    $(".categoria").on("click", function(e) {
+      e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+  
+      // Buscar el <ul> (subcategoría) directamente dentro del <li> actual
+      const subcategoria = $(this).next("ul");
+  
+      // Ocultar las demás subcategorías abiertas
+      $(".menu-categorias ul ul").not(subcategoria).slideUp();
+  
+      // Mostrar/ocultar la subcategoría seleccionada
+      subcategoria.slideToggle();
     });
-
-    // Mostrar/ocultar subtipos al hacer clic en una categoría
-    $('.categoria').click(function(e) {
-        e.preventDefault(); // Evita el comportamiento predeterminado del enlace
-        $(this).next('.subtipos').slideToggle(); // Muestra u oculta la lista de subtipos
+    // Botón para abrir/cerrar todo el menú lateral (opcional)
+    $(".toggle-menu").on("click", function() {
+      $(".menu-categorias").slideToggle();
     });
-});
-    
+  });
+  

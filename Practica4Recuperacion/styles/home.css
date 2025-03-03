@@ -229,10 +229,6 @@ aside li:hover > a {
 .elementoHome span {
   font-size: x-large;
 }
-footer {
-  background-color: #242527;
-  height: 30px;
-}
 /* Ventana emergente */
 #ventanaEmergente {
   display: flex;
@@ -248,7 +244,6 @@ footer {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-
 }
 #ventanaEmergente.show {
   opacity: 1;
@@ -279,7 +274,6 @@ footer {
 #formularioEmergente label{
 margin-bottom: 10px;
 }
-
 .boton2 {
   background-color: #000000;
   color: #f9fafa;
@@ -324,4 +318,18 @@ margin-bottom: 10px;
 }
 .escondido {
   display: none;
+}
+footer {
+  background-color: #242527;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Esto centra verticalmente el span */
+  text-align: center;
+}
+footer span{
+  margin-left: 15px;
+}
+footer span a{
+  text-decoration: none;
+  color: #df0713;
 }
