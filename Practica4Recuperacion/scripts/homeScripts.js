@@ -28,13 +28,27 @@ $(document).ready(function () {
   /*Funcionalidad para menu lateral:*/
   $("#Categoria").click(function () {
     let menu = $("aside");
+    let anchoPantalla=$(window).width();
     let main = $(".CategoriasProductos");
-    if (menu.css("left") === "-250px") {
-      menu.css("left", "0");
-      main.addClass("encogido");
-    } else {
-      menu.css("left", "-250px");
-      main.removeClass("encogido");
+    if(anchoPantalla>925){
+      // Caso pantalla mayor de 925, se mueve lateralmente
+      if (menu.css("left") === "-250px" ) {
+        menu.css("left", "0");
+        main.addClass("encogido");
+      } else {
+        menu.css("left", "-250px");
+        main.removeClass("encogido");
+      }
+    }else{
+      // Caso menor, quiero que el aside ocupe todo el lateral
+      console.log(menu.css("left") );
+      if (menu.css("left") === "-1000px" ) {
+        menu.css("left", "0");
+        
+      } else {
+        menu.css("left", "-1000px");
+      
+      }
     }
   });
   $("aside ul li").mouseenter(function () {
