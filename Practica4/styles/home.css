@@ -237,6 +237,33 @@ main {
   max-width: 50px;
   height: auto;
 }
+.tablaPedidos {
+  justify-self: center;
+  border-collapse: collapse;
+  min-width: 90%;
+  gap: 200px;
+  text-align: center;
+}
+/* Puntero a tablas(puede que generica) */
+.tablaPedidos th,
+td {
+  border: 2px solid whitesmoke;
+  padding: 15px;
+}
+/* Puntero a celdas(quizas genericas) */
+.tablaPedidos th {
+  font-weight: bolder;
+  font-size: 2em;
+}
+.contAcciones {
+  text-align: center;
+}
+td > button {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-right: 0;
+}
 
 @media (max-width: 800px) and (min-width: 600px) {
   .contenedorHome > .categorias {

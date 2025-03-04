@@ -461,3 +461,30 @@ footer span a {
   }
 }
 /* Hecho es responsive hasta 325px */
+.tablaPedidos {
+  justify-self: center;
+  border-collapse: collapse;
+  min-width: 90%;
+  gap: 200px;
+  text-align: center;
+}
+/* Puntero a tablas(puede que generica) */
+.tablaPedidos th,
+td {
+  border: 2px solid whitesmoke;
+  padding: 15px;
+}
+/* Puntero a celdas(quizas genericas) */
+.tablaPedidos th {
+  font-weight: bolder;
+  font-size: 2em;
+}
+.contAcciones {
+  text-align: center;
+}
+td > button {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  margin-right: 0;
+}

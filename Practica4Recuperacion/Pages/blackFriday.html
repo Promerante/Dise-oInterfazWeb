@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Practica 4 Recuperación</title>
+    <title>BlackFriday Practica 4 Recuperación</title>
     <link rel="stylesheet" href="../styles/home.css" />
-    <link rel="icon" href="../images/logos/logoSinNombre.png" type="image/png" />
+
+    <link
+      rel="icon"
+      href="../images/logos/logoSinNombre.png"
+      type="image/png"
+    />
     <script src="../scripts/jquery-3.7.1.min.js"></script>
     <script src="../scripts/homeScripts.js"></script>
+    <!-- Metemos estos vinculos porque el nav es igual en todos -->
+    <script src="../jquery-ui-1.14.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../jquery-ui-1.14.1/jquery-ui.min.css">
+    <script src="../scripts/blackFriday.js"></script>
   </head>
   <body>
     <header>
@@ -53,6 +62,7 @@
           <!-- Importante meterle un evento cuando se de click funcione como buscador -->
           <input id="buscadorHeader" type="text" placeholder="Buscar..." />
         </div>
+        
       </div>
     </header>
     <main>
@@ -96,14 +106,13 @@
               id="Casa"
               class="imgAside"
             />
-            <a href="#cat4" class="categoria">Hogar</a> 
+            <a href="#cat4" class="categoria">Hogar</a>
           </li>
         </ul>
       </aside>
       <div class="CategoriasProductos">
         <h1 class="titulo">Categorias</h1>
         <div class="categorias">
-      
           <div class="elementoHome">
             <img src="../images/imagenes/portatil.jpg " alt="Portatil" />
             <span>Ordenadores y Portatiles</span>
@@ -168,63 +177,72 @@
         <a href="accesibilidad.html">aquí</a>,si desea ver licensias y el indice
         general pulse el boton "Acerca de nosotros"</span
       >
+      
     </footer>
     <!-- Ventana Emergente -->
     <div id="ventanaEmergente" class="escondido">
       <div class="contenidoVentana">
         <h2>Formulario</h2>
         <form id="formularioEmergente">
-          <label for="nombre">Nombre:</label><br /><br />
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Ingresa tu nombre"
-            required
-          /><br /><br /><br />
-
-          <label for="email">Email:</label><br /><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Ingresa tu email"
-            required
-          /><br /><br /><br />
-          <div class="selectorPais">
-            <label for="pais">Selecciona tu país:</label><br />
-            <select id="pais" name="pais" required>
-              <option value="" disabled selected>--Selecciona un país--</option>
-              <option value="+34">España</option>
-              <option value="+1">Estados Unidos</option>
-              <option value="+44">Reino Unido</option>
-              <option value="+49">Alemania</option>
-              <option value="+81">Japón</option></select
-            ><br /><br />
-          </div>
-          <label for="numero">Móvil:</label><br />
-          <div class="movilInput">
+          <fieldset>
+            <label for="nombre">Nombre:</label><br /><br />
             <input
               type="text"
-              id="prefijo"
-              name="prefijo"
-              readonly
-              style="width: 60px; text-align: center"
-            />
-            <input
-              type="text"
-              id="numero"
-              name="numero"
-              placeholder="123456789"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingresa tu nombre"
+              title="Necesitamos tu nombre para las ofertas"
               required
-              style="flex: 1; margin-left: 5px"
-            />
-            <!-- Meto el estilo directamente aqui por lo especifico que son -->
-          </div>
-          <button type="submit" class="boton2">Enviar</button>
-          <button type="button" id="cerrarVentana" class="boton2">
-            Cerrar
-          </button>
+            /><br /><br /><br />
+
+            <label for="email">Email:</label><br /><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ingresa tu email"
+              title="Necesitamos tu email para las ofertas"
+              required
+            /><br /><br /><br />
+            <div class="selectorPais">
+              <label for="pais">Selecciona tu país:</label><br />
+              <select id="pais" name="pais" required>
+                <option value="" disabled selected>
+                  --Selecciona un país--
+                </option>
+                <option value="+34">España</option>
+                <option value="+1">Estados Unidos</option>
+                <option value="+44">Reino Unido</option>
+                <option value="+49">Alemania</option>
+                <option value="+81">Japón</option></select
+              ><br /><br />
+            </div>
+            <label for="numero">Móvil:</label><br />
+            <div class="movilInput">
+              <input
+                type="text"
+                id="prefijo"
+                name="prefijo"
+                readonly
+                style="width: 60px; text-align: center"
+              />
+              <input
+                type="text"
+                id="numero"
+                name="numero"
+                placeholder="123456789"
+                required
+                style="flex: 1; margin-left: 5px"
+              />
+              <!-- Meto el estilo directamente aqui por lo especifico que son -->
+            </div>
+            <p class="fecha">Fecha que has conocido la promocion: <input type="text" id="datepicker"></p>
+            <button type="submit" class="boton2">Enviar</button>
+            <button type="button" id="cerrarVentana" class="boton2">
+              Cerrar
+            </button>
+           
+          </fieldset>
         </form>
       </div>
     </div>
